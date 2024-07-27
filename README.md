@@ -17,5 +17,6 @@ Add fixation time before the target and after the response.
 
 ###
 Things keep in mind:
-1. The scripts do not have function for recording results if exit in the middle of the test. Which could happen during scan.
+1. The scripts do not have function for recording results if exiting in the middle of the test. Which could happen during scan.
 2. Keep the stimuli on the screen could increase the affection of the former trial. Hide the stimuli after response is suggested.
+3. There was no instruction for scan version
