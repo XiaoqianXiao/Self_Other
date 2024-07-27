@@ -1,0 +1,24 @@
+8.6629 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+8.6685 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1512, 982]. Using actual size
+9.7524 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+9.7527 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x15762f820>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x15762f7c0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x15762f610>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x1574df820>, multiSample=False, name='window1', numSamples=2, pos=[378.0, 245.5], screen=0, size=array([3024, 1964]), stencilBits=0, stereo=False, title='PsychoPy', units='deg', useFBO=False, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.7528 	EXP 	window1: mouseVisible = True
+9.7528 	EXP 	window1: backgroundImage = None
+9.7528 	EXP 	window1: backgroundFit = 'cover'
+9.7531 	EXP 	window1: mouseVisible = True
+9.7761 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='Geneva', fontFiles=[], height=0.5, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='deg', win=Window(...), wrapWidth=15.0)
+9.7762 	EXP 	window1: mouseVisible = True
+9.7805 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='Geneva', fontFiles=[], height=0.7, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0. , 0.7]), rgb=UNKNOWN, text='Hello World', units='deg', win=Window(...), wrapWidth=15.0)
+9.7806 	EXP 	window1: mouseVisible = True
+9.7820 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='Geneva', fontFiles=[], height=0.7, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0. , -0.7]), rgb=UNKNOWN, text='Hello World', units='deg', win=Window(...), wrapWidth=15.0)
+9.7827 	EXP 	window1: mouseVisible = False
+9.8084 	WARNING 	t of last frame was 56.06ms (=1/17)
+9.8084 	EXP 	unnamed TextStim: height = 0.7
+9.8084 	EXP 	unnamed TextStim: height = 0.7
+9.8084 	EXP 	unnamed TextStim: height = 0.7
+9.8084 	EXP 	unnamed TextStim: text = "\nIN THE FOLLOWING TASK, YOU WILL BE ASKED TO RATE ONE OF THREE TYPES OF JUDGMENTS FOR DIFFERENT WORDS:\n\nSELF: DOES THIS WORD DESCRIBE YOU?\nOBAMA: DOES THIS WORD DESCRIBE FORMER U.S. PRESIDENT BARACK OBAMA?\nUPPERCASE: IS THIS WORD PRINTED IN UPPERCASE LETTERS?\n\nFOR EACH ITEM, PLEASE RESPOND WITH YES [1] OR NO [2] ON YOUR RESPONSE BOX. PLEASE KEEP YOUR EYES ON THE CENTRAL FIXATION POINT DURING THE TASK. IF THE NEXT TRIAL COMES UP AND YOU HAVE NOT YET RESPONDED TO THE PREVIOUS TRIAL, THAT'S OKAY, JUST SKIP IT AND MOVE ONTO THE NEXT ONE. \n\nREADY?"
+11.9307 	DATA 	Keypress: 1
+11.9421 	EXP 	window1: mouseVisible = True
