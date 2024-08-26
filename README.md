@@ -1,4 +1,5 @@
 # Self_Other
+# Work on psychopy v2024.1.5
 original number of trials:
 run1: 134
 run2: 137
