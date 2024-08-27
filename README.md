@@ -11,7 +11,7 @@ then put
 2) 21 NULL from run3 to run1
 3) 18 NULL from run3 to run2\
 end up with 194 trials/run in 2 runs in total  \
-the total time for each run will be 600s + reaction time of last trial/ 600s + longest wait time for last trial. \
+the total time for each run will be 600s + reaction time of last trial/ 600s + longest wait time for last trial.
 
 Add fixation time before the target and after the response.
 
