@@ -7,11 +7,11 @@ run3: 134
 Change:
 get rid of 16 items in run3 (4 for each condition),
 then put 
-1) 13 * 3 conditions from run3 to run1 and run2
-2) 21 NULL from run3 to run1
-3) 18 NULL from run3 to run2
-end up with 194 trials/run in 2 runs in total
-the total time for each run will be 600s + reaction time of last trial/ 600s + longest wait time for last trial.
+1) 13 * 3 conditions from run3 to run1 and run2 \
+2) 21 NULL from run3 to run1  \
+3) 18 NULL from run3 to run2  \
+end up with 194 trials/run in 2 runs in total  \
+the total time for each run will be 600s + reaction time of last trial/ 600s + longest wait time for last trial. \
 
 Add fixation time before the target and after the response.
 
