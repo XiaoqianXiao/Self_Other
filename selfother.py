@@ -2,19 +2,19 @@
 # -*- coding: utf-8 -*-
 """
 Written by Jonas Kristoffer Lindeløv, lindeloev.net.
-
-TO DO:
  * Control stimulus appearance using variables?
  * Set fullscreen
+
+Modified by Xiaoqian Xiao. 20240916
 """
 
 # Measure this on your monitor
-MON_WIDTH = 37  # cm
-MON_DISTANCE = 70  # cm
-MON_SIZE = [1024, 768]  # x,y pixels
+MON_WIDTH = 70  # cm
+MON_DISTANCE = 120  # cm
+MON_SIZE = [1920, 1080]  # x,y pixels
 
 # Presentation parameters
-SCAN_TIME = 2.5  # number of seconds
+SCAN_TIME = 1.5  # number of seconds
 SCAN_TIME_BUFFER = 0.5  # seconds to wait before concluding that the scanner won't send more triggers
 NONRESPONSE_WINDOW = 0.0  # how many seconds to ignore responses in the beginning of a trial
 
@@ -37,16 +37,23 @@ READY?"""
 }
 
 # Keyboard keys
-KEYS_SUBJECT = {'1': 'yes', '2': 'no'}
-KEYS_EXPERIMENTER = ['space']
-SCANNER_KEYS = ['=', 'equal']
-QUIT_KEYS = ['escape']
+# for scanner
+SCANNER_TRIGGER_KEY = ['t']
+SCANNER_RESPONSE_KEYS = {'1': 'yes', '2': 'no'}
+SCANNER_QUIT_KEYS = ['F9']
+# for practice
+LOCAL_START_KEY = ['space']
+LOCAL_RESPONSE_KEYS = {'f': 'yes', 'j': 'no'}
+LOCAL_QUIT_KEYS = ['escape']
+
+SUBJECT_KEYS = SCANNER_RESPONSE_KEYS.update(LOCAL_RESPONSE_KEYS)
+
+max_duration = 2
 
 conditions = ['SELF', 'OBAMA', 'UPPERCASE']
 ORDER_FILES = ['SelfOther-001.csv', 'SelfOther-002.csv']
 
 JUDGEMENT_MAP = {  # mapping from sequence to judgement type (fixed for all)
-    'NULL': 'NULL',
     'evt1': 'SELF',
     'evt2': 'UPPERCASE',
     'evt3': 'OBAMA'
@@ -57,26 +64,26 @@ SET THINGS UP
 """
 from psychopy import visual, event, core, gui, monitors, data, logging
 import itertools
+#%%
 import math
 import random
 from datetime import datetime
 from pytz import timezone
 import pandas as pd
 import os
-
-#
+from itertools import permutations
+#%%
 expName = 'self_other'
 input_subID = 0
 # expInfo box
-expInfo = {
-    'setting': ['SCANNER', 'PRACTICE'],
-    'words_file': ['Lists 1-3 run 1.xlsx', 'Lists 1-3 run 2.xlsx', 'Lists 4-6 run 1.xlsx',
-                   'Lists 4-6 run 2.xlsx', 'Word Lists 1-3.xlsx', 'Word Lists 4-6.xlsx',
-                   'PRACTICE.xlsx']}
-expInfo['subID'] = str(input_subID)
-expInfo['sessionID'] = ['baseline', 'week1', 'week2', 'week3']
-expInfo['runID'] = ['1','2']
-expInfo['order_id'] = ['0','1','2','3','4','5']
+expInfo = {'setting': ['SCANNER', 'PRACTICE'],
+           'words_file': ['Lists 1-3 run 1.xlsx', 'Lists 1-3 run 2.xlsx', 'Lists 4-6 run 1.xlsx',
+                          'Lists 4-6 run 2.xlsx', 'Word Lists 1-3.xlsx', 'Word Lists 4-6.xlsx',
+                          'PRACTICE.xlsx'],
+           'subID': str(input_subID),
+           'sessionID': ['baseline', 'week1', 'week2', 'week3'],
+           'runID': ['1', '2'],
+           'order_id': ['0', '1', '2', '3', '4', '5']}
 dlg = gui.DlgFromDict(dictionary=expInfo, title='My Experiment')
                       #order=['subID', 'sessionID', 'runID', 'setting', 'order_id', 'words_file'])
 if dlg.OK == False:
@@ -116,174 +123,162 @@ text_judgement = visual.TextStim(win, pos=(0, TEXT_DISTANCE), height=TEXT_SIZE, 
 text_adjective = visual.TextStim(win, pos=(0, -TEXT_DISTANCE), height=TEXT_SIZE, font='Geneva', bold=True)
 # Hide the cursor
 win.mouseVisible = False
+
 #%%
-# Translate order_id into list of condition-event translation
-word_column_order = list(itertools.permutations(range(3)))[
-    int(expInfo['order_id'])]  # select a permutation of SELF, UPPERCASE, and OBAMA
-# Load words
-word_lists = pd.read_excel(expInfo['words_file'])
-word_lists = {
-    'NULL': [''] * 1000,  # make plenty of NULLs at index 0
-    'SELF': list(word_lists.iloc[:, word_column_order[0]]),
-    'UPPERCASE': list(word_lists.iloc[:, word_column_order[1]]),
-    'OBAMA': list(word_lists.iloc[:, word_column_order[2]])
-}
+# prepare wordlist
+# generate condition transformer
+lst = list(range(1,4))
+condition_lists = list_permutations(lst)
+# assign condition using the subjectID
+#condition_category = int(expInfo['subID']) % len(list_permutations(lst))
+# for test
+condition_category = int('001') % len(list_permutations(lst))
+condition_list = condition_lists[condition_category]
+#load words
+#word_lists = pd.read_csv(expInfo['words_file'])
+# for test
+#%%
+word_lists = pd.read_csv('wordlist_run1.csv')
+word_lists.loc[word_lists['condition_design']==1, 'condition'] = condition_list[0]
+word_lists.loc[word_lists['condition_design']==2, 'condition'] = condition_list[1]
+word_lists.loc[word_lists['condition_design']==3, 'condition'] = condition_list[2]
+#%%
+word_lists['condition'] = word_lists['condition'].astype(int)
+word_lists['condition_name'] = word_lists['condition'].apply(lambda x: conditions[x - 1])
+word_lists_shuffled = word_lists.sample(frac=1).reset_index(drop=True)
+#%%
+# prepare sequence
+df_sequence = pd.read_csv('sequence_run1.csv')
+df_sequence['row_number'] = df_sequence.groupby(['condition', 'valence']).cumcount()
+word_lists_shuffled['row_number'] = word_lists_shuffled.groupby(['condition', 'valence']).cumcount()
+df_trial = pd.merge(df_sequence, word_lists_shuffled, on=['condition', 'valence', 'row_number'], how='inner')
+df_trial = df_trial.sort_values(by='trial_no', ascending=True)
+#%%
+#not need since judgement_types = condition_name
+#df_trial['judgement_types'] = df_trial.loc[:,'condition'].replace(JUDGEMENT_MAP)
+n_cases = df_trial[df_trial['condition_name'] == 'UPPERCASE'].shape[0]  # number of UPPERCASE trials
+n_cases_half = int(math.ceil(n_cases / 2.0))  # half that number used to generate...
+cases = ['LOWER'] * n_cases_half + ['UPPER'] * (n_cases - n_cases_half)  # list of cases for UPPERCASE trials, half of each.
+random.shuffle(cases)
+df_trial['judgement'] = df_trial['condition_name']
+df_trial.loc[df_trial['condition_name'] == 'UPPERCASE', 'judgement'] = cases
+#%%
+df_trial['words_present'] = df_trial['words'].str.lower()
+df_trial.loc[df_trial['judgement']=='UPPER', 'words_present'] = df_trial['words'].str.upper()
+#%%
 clock = core.Clock()
-
 #%%
-def make_trials(run_number):
-    """ Returns a list of dictionaries, where each dictionary represents a trial """
-    # Load sequence for this run number
-    sequence_file = ORDER_FILES[run_number - 1]
-    sequence = pd.read_csv(sequence_file,na_filter=False, header=None)
-    fixation_onsets = sequence.iloc[:,0]
-    judgement_types = sequence.iloc[:,4].replace(JUDGEMENT_MAP)  # pick the judgement type column and translate it
-    durations_type = (sequence.iloc[:,2] / SCAN_TIME).astype(
-        int)  # pick presentation time, convert from seconds (float) to scans (int)
-    n_cases = sum(judgement_types == 'UPPERCASE')  # number of UPPERCASE trials
-    n_cases_half = int(math.ceil(n_cases / 2.0))  # half that number used to generate...
-    cases = ['LOWER'] * n_cases_half + ['UPPER'] * n_cases_half  # list of cases for UPPERCASE trials, half of each.
-    random.shuffle(cases)  # random order
-    # Loop through the list of trial order, then  fill out remaining info
-    trials = []  # list of trials (dictionaries). Will be filled out below and then returned
-    for trial_number, judgement_type in enumerate(judgement_types):
-        case = cases.pop() if judgement_type == 'UPPERCASE' else 'UPPER'  # default to UPPER. Else pick from the list
-        #case = cases[trial_number]
-        adjective = word_lists[judgement_type].pop()
-        trial = {
-            # Trial info
-            'judgement': judgement_type,
-            #'word_list': judgement_index,
-            'adjective': adjective.upper() if case == 'UPPER' else adjective.lower(),
-            # takes a word from this list and removes it
-            'case': case,
-            'durations_type': durations_type[trial_number],
-            'fixation_onset': fixation_onsets[trial_number],
-            'trial_number': trial_number + 1,  # start at 1 instead of 0
-            'run_number': run_number,
-
-            # Placeholders for answers
-            'time_start': '',
-            'answer': '',
-            'rt': '',
-        }
-        trial.update(expInfo)  # add data from expInfo (general session info)
-        trials.append(trial)  # add this trial to the trial list
-    return trials
-
-#%%
-def run_block(run_number):
-    """ Takes a trial list and runs through it, displaying and recording appropriately """
-    trials = make_trials(run_number)
+def run_run(run_number):
     clock.reset()
-    df_trials = pd.DataFrame(trials)
-    for index, row in df_trials.iterrows():
+    for index, row in df_trial.iterrows():
         trial = row.to_dict()
+        thisExp.addData('trial_no', trial['trial_no'])
+        thisExp.addData('onset_time', trial['onset_time'])
+        thisExp.addData('words', trial['words'])
+        thisExp.addData('condition_name', trial['condition_name'])
+        thisExp.addData('valence', trial['valence'])
         thisExp.addData('judgement', trial['judgement'])
-        thisExp.addData('adjective', trial['adjective'])
-        thisExp.addData('case', trial['case'])
-        thisExp.addData('durations_type', trial['durations_type'])
-        thisExp.addData('trial_number', trial['trial_number'])
         # Prepare
-        text_judgement.text = trial['judgement'] if trial['judgement'] != 'NULL' else ''
-        text_adjective.text = trial['adjective']
-        current_scan = 0  # number of TRs that this trial has been ongoing
-        fixation_onset = trial['fixation_onset']
-        # Fixation start
-        #fixation_text.draw()
+        text_condition.text = trial['condition_name']
+        text_adjective.text = trial['words']
+        onset_time = trial['onset_times']
+
+        # Wait for the specified onset time
+        while trial_clock.getTime() < onset_time:
+            pass
         fix.setAutoDraw(True)
-        win.flip()
-        s_time = clock.getTime()
-        thisExp.addData('fixationStart_onsetTime', clock.getTime())
-        core.wait(0.2)
-        fix.setAutoDraw(False)
-        fix.setAutoDraw(True)
-        text_judgement.draw()
+        text_condition.draw()
         text_adjective.draw()
         win.flip()
         time_start = clock.getTime()
-        thisExp.addData('onsetTime', clock.getTime())
-        max_duration = SCAN_TIME * trial['durations_type']
+        accurate_onsetTime = thisExp.addData('accurate_onsetTime', clock.getTime())
 
+        # for scanner
         if expInfo['setting'] == 'SCANNER':
-            response = event.waitKeys(keyList=list(KEYS_SUBJECT.keys()) + SCANNER_KEYS + QUIT_KEYS, timeStamped=clock,
-                                      maxWait=max_duration + SCAN_TIME_BUFFER)
-            if response is None:
-                key = SCANNER_KEYS[0]
-            else:
-                key, reaction_time = response[0]
-        elif expInfo['setting'] == 'PRACTICE':
-            response = event.waitKeys(keyList=list(KEYS_SUBJECT.keys()) + QUIT_KEYS, timeStamped=clock,
+            response = event.waitKeys(keyList=SCANNER_TRIGGER_KEY +
+                                               list(SCANNER_RESPONSE_KEYS.keys()) +
+                                               SCANNER_QUIT_KEYS,
+                                      timeStamped=clock,
                                       maxWait=max_duration)
-            if response is None:
-                # Timeout, pretend that the scanner sent a trigger
-                key = SCANNER_KEYS[0]
+            if keys:
+                response, reaction_time = keys[0]
+                if response == SCANNER_QUIT_KEYS:
+                    resultFile_name = "tmp_" + resultFile_name
+                    resultFile_path = os.path.join(results_dir, resultFile_name)
+                    thisExp.saveAsWideText(resultFile_path)
+                    core.quit()
+                rt = reaction_time - accurate_onsetTime
             else:
-                key, reaction_time = response[0]
+                response = None
+                reaction_time = None
+                rt = None
+                # Record task responses
+        elif expInfo['setting'] == 'PRACTICE':
+            response = event.waitKeys(keyList=LOCAL_START_KEY +
+                                                list(LOCAL_RESPONSE_KEYS.keys()) +
+                                                LOCAL_QUIT_KEYS,
+                                        timeStamped=clock,
+                                        maxWait=max_duration)
+            if keys:
+                response, reaction_time = keys[0]
+                if response == LOCAL_QUIT_KEYS:
+                    resultFile_name = "tmp_" + resultFile_name
+                    resultFile_path = os.path.join(results_dir, resultFile_name)
+                    thisExp.saveAsWideText(resultFile_path)
+                    core.quit()
+                thisExp.addData('reaction_time', reaction_time)
+                rt = reaction_time - accurate_onsetTime
+                else:
+                response = None
+                reaction_time = None
+                rt = None
         # Record task responses
-        if key in KEYS_SUBJECT.keys():
+        thisExp.addData('reaction_time', reaction_time)
+        thisExp.addData('rt', rt)
+        thisExp.addData('responses', response)
+        if key in SCANNER_RESPONSE_KEYS.keys():
             answer = KEYS_SUBJECT[key]  # translate from key to meaning
-            rt = reaction_time - time_start
             thisExp.addData('answer', answer)
-            thisExp.addData('reaction_time', reaction_time)
-            thisExp.addData('rt', rt)
-            # Break out of while-loop if the scanner is beginning the next trigger
-        #if key in SCANNER_KEYS:
-        #    current_scan += 1  # a scan trigger was recorded
-        #    if current_scan >= trial['durations_type']:
-        #        break
-        if key in QUIT_KEYS:
-            core.quit()
-        fix.setAutoDraw(True)
-        e_time = clock.getTime()
-        win.flip()
-        core.wait(max_duration - (e_time - s_time) - 0.3)
-        fix.setAutoDraw(False)
-        # Save trial
         # end of trial - move to next line in data output
         thisExp.nextEntry()
 #%%
 def show_instruction(text):
     """Waits for the subject to continue; then waits for the next scanner
     trigger if this is in the scanner."""
+    text_judgement.text = text
+    text_judgement.draw()
+    win.flip()
     if expInfo['setting'] == 'PRACTICE':  # only show instruction if there is a text to show
-        text_judgement.text = text
-        text_judgement.draw()
-        win.flip()
-        key = event.waitKeys(keyList=list(KEYS_SUBJECT.keys()) + QUIT_KEYS)[0]  # just pick first response, no timestamp
-        if key in QUIT_KEYS:
+        key = event.waitKeys(keyList=list(LOCAL_RESPONSE_KEYS.keys()) + LOCAL_QUIT_KEYS)[0]  # just pick first response, no timestamp
+        if key in LOCAL_QUIT_KEYS:
             core.quit()
-
     # Wait for scanner to start - 
     elif expInfo['setting'] == 'SCANNER':
-        win.flip()  # blank screen
-        key = event.waitKeys(keyList=SCANNER_KEYS + QUIT_KEYS)[0]  # synchronize with scanner
-        if key in QUIT_KEYS:
+        key = event.waitKeys(keyList=SCANNER_RESPONSE_KEYS + SCANNER_QUIT_KEYS)[0]  # synchronize with scanner
+        if key in SCANNER_QUIT_KEYS:
             core.quit()
+    core.wait(0.5)
+def run_goodbye(win, goodbye_text):
+    fix.draw()
+    win.flip()
+    core.wait(4)
+    #event.waitKeys()
+def list_permutations(lst):
+    return list(permutations(lst))
 """
 EXECUTE EXPERIMENT
 """
 #%%
 # Run experiment with break. Start at specified start_run
-if int(expInfo['runID']) == 1:
-    # Show instructions
-    show_instruction(INSTRUCTIONS[expInfo['setting']])  # Translate from setting to instruction text
-    run_block(1)
-    # Save the experiment data
-    thisExp.saveAsWideText(resultFile_path)
-    thisExp.saveAsPickle(resultFile_path)
-    logging.flush()
-    thisExp.abort()  # Ensure the data is saved
-    win.close()
-    core.quit()
-if int(expInfo['runID']) == 2:
-    show_instruction(INSTRUCTIONS['break'])
-    run_block(2)
-    # Save the experiment data
-    thisExp.saveAsWideText(resultFile_path)
-    thisExp.saveAsPickle(resultFile_path)
-    logging.flush()
-    thisExp.abort()  # Ensure the data is saved
-    win.close()
-    core.quit()
+# Show instructions
+show_instruction(INSTRUCTIONS[expInfo['setting']])  # Translate from setting to instruction text
+run_run()
+run_goodbye(win, goodbye_text)
+# Save the experiment data
+thisExp.saveAsWideText(resultFile_path)
+thisExp.saveAsPickle(resultFile_path)
+logging.flush()
+thisExp.abort()  # Ensure the data is saved
+win.close()
+core.quit()
 # Finished, yay!
