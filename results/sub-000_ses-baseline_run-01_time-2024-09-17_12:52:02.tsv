@@ -1,0 +1,154 @@
+thisRow.t	notes	trial_no	onset_time	words	condition_name	valence	judgement	accurate_onsetTime	reaction_time	rt	responses	answer	setting	words_file	subID	sessionID	runID
+		1	0	sloppy	SELF	2	SELF	0.037601459	1.145393417	1.107791958	space		PRACTICE	wordlist_run1.csv	0	baseline	1
+		2	4	unenterprising	OBAMA	1	OBAMA	4.018683417	4.454729167	0.43604575	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		3	8	argumentative	OBAMA	2	OBAMA	8.017533709	8.430331417	0.412797708	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		4	12	unethical	OBAMA	1	OBAMA	12.01632188	12.42030917	0.403987292	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		5	16	snobbish	SELF	1	SELF	16.01722917	16.42002138	0.402792208	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		6	20	superficial	SELF	1	SELF	20.01711638	20.35710979	0.339993417	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		7	24	studious	SELF	2	SELF	24.01723792	24.40641692	0.389179	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		8	28	profane	OBAMA	2	OBAMA	28.0174505	28.36104021	0.343589709	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		9	32	scornful	UPPERCASE	2	UPPER	32.01635033	32.35888246	0.342532125	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		10	36	trustful	OBAMA	3	OBAMA	36.01654254	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		11	40	unattentive	SELF	3	SELF	40.01683567	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		12	44	forgetful	UPPERCASE	2	UPPER	44.01723771	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		13	48	good-natured	OBAMA	3	OBAMA	48.01756417	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		14	52	dominating	SELF	1	SELF	52.01648954	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		15	56	self-disciplined	UPPERCASE	2	UPPER	56.01758471	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		16	60	self-centered	SELF	1	SELF	60.01705258	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		17	64	unwise	SELF	1	SELF	64.01563975	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		18	68	extravagant	UPPERCASE	2	LOWER	68.01725975	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		19	72	trusting	SELF	2	SELF	72.017272	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		20	76	logical	UPPERCASE	3	LOWER	76.01632529	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		21	80	witty	UPPERCASE	2	UPPER	80.01621854	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		22	84	prudent	OBAMA	2	OBAMA	84.01632246	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		23	88	profane	SELF	3	SELF	88.0157125	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		24	92	solemn	UPPERCASE	2	LOWER	92.01630954	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		25	96	self-conceited	UPPERCASE	2	UPPER	96.01530238	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		26	100	sincere	UPPERCASE	2	LOWER	100.0156625	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		27	104	curious	SELF	3	SELF	104.018274	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		28	108	immature	OBAMA	1	OBAMA	108.017377	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		29	112	hot-headed	OBAMA	2	OBAMA	112.0177841	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		30	116	crude	SELF	2	SELF	116.0158654	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		31	120	weak	OBAMA	1	OBAMA	120.0164713	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		32	124	painstaking	SELF	1	SELF	124.0172168	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		33	128	nonchalant	UPPERCASE	2	UPPER	128.0187334	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		34	132	trustful	OBAMA	2	OBAMA	132.0176723	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		35	136	generous	SELF	2	SELF	136.0157549	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		36	140	nonchalant	OBAMA	3	OBAMA	140.0173284	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		37	144	crude	SELF	3	SELF	144.0162401	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		38	148	understanding	OBAMA	1	OBAMA	148.0159388	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		39	152	careless	SELF	2	SELF	152.0167949	152.772728	0.755933083	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		40	156	self-conceited	UPPERCASE	3	LOWER	156.0181289	156.5513891	0.533260209	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		41	160	underhanded	UPPERCASE	2	UPPER	160.0187966	161.1321344	1.113337833	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		42	164	lazy	SELF	3	SELF	164.0200414	164.7380015	0.717960083	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		43	168	extravagant	OBAMA	3	OBAMA	168.017274	168.4422906	0.425016584	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		44	172	lucky	OBAMA	1	OBAMA	172.0171503	172.3627195	0.345569209	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		45	176	unruly	UPPERCASE	1	UPPER	176.0177424	176.5138003	0.496057875	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		46	180	thoughtless	SELF	2	SELF	180.0173395	180.3505847	0.33324525	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		47	184	prudent	OBAMA	3	OBAMA	184.0156647	184.3463665	0.330701791	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		48	188	kind-hearted	OBAMA	3	OBAMA	188.016877	188.2862999	0.269422917	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		49	192	self-confident	UPPERCASE	3	LOWER	192.0160069	192.3120853	0.296078417	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		50	196	realist	SELF	3	SELF	196.0170046	196.3523438	0.33533925	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		51	200	versatile	OBAMA	3	OBAMA	200.0165937	200.3200258	0.303432125	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		52	204	logical	UPPERCASE	2	LOWER	204.0169287	204.3410884	0.324159708	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		53	208	sincere	UPPERCASE	3	UPPER	208.0194105	208.2728304	0.253419875	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		54	212	deliberate	UPPERCASE	1	LOWER	212.0178518	212.2864337	0.268581917	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		55	216	soft-hearted	OBAMA	1	OBAMA	216.0169788	216.271659	0.254680125	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		56	220	lifeless	OBAMA	2	OBAMA	220.0170716	220.3259116	0.30884	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		57	224	cruel	UPPERCASE	1	UPPER	224.0169481	224.2706482	0.253700084	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		58	228	dependent	UPPERCASE	1	LOWER	228.0174361	228.3633804	0.345944333	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		59	232	loud-mouthed	OBAMA	3	OBAMA	232.017979	232.3221963	0.304217334	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		60	236	amusing	SELF	1	SELF	236.0182699	236.27248	0.254210125	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		61	240	nonchalant	UPPERCASE	3	LOWER	240.0171687	240.4060362	0.388867417	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		62	244	forward	SELF	3	SELF	244.0174929	244.2580068	0.240513917	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		63	248	self-controlled	OBAMA	1	OBAMA	248.0177339	248.2219752	0.204241375	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		64	252	well-read	SELF	1	SELF	252.0182069	252.2558883	0.237681459	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		65	256	quick-witted	SELF	2	SELF	256.018233	256.3667595	0.3485265	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		66	260	moralistic	SELF	1	SELF	260.027363	260.3825461	0.355183166	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		67	264	hot-headed	SELF	3	SELF	264.0166263	265.253228	1.236601667	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		68	268	untruthful	OBAMA	1	OBAMA	268.016979	268.3655161	0.348537084	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		69	272	realist	SELF	2	SELF	272.0166799	272.4088591	0.39217925	space		PRACTICE	wordlist_run1.csv	0	baseline	1
+		70	276	boastful	UPPERCASE	1	UPPER	276.0254458	277.9921401	1.966694334	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		71	280	haha	UPPERCASE	3	LOWER	280.0176562	280.4051647	0.3875085	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		72	284	companionable	UPPERCASE	1	UPPER	284.0174621	284.4241062	0.406644125	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		73	288	self-confident	UPPERCASE	2	UPPER	288.0173455	288.3480729	0.330727416	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		74	292	witty	OBAMA	3	OBAMA	292.0154051	292.3278935	0.312488375	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		75	296	curious	OBAMA	2	OBAMA	296.0189898	296.342966	0.323976208	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		76	300	temperamental	OBAMA	1	OBAMA	300.0173789	300.336578	0.319199125	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		77	304	romantic	OBAMA	2	OBAMA	304.0186309	304.2956098	0.276978917	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		78	308	unconventional	SELF	3	SELF	308.0177779	308.3303206	0.312542667	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		79	312	unattentive	OBAMA	2	OBAMA	312.0160579	312.3353476	0.319289667	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		80	316	withdrawn	OBAMA	3	OBAMA	316.0154593	316.3750408	0.3595815	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		81	320	persistent	SELF	2	SELF	320.0171532	320.3362333	0.319080083	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		82	324	clear-headed	OBAMA	1	OBAMA	324.0173455	324.3879158	0.37057025	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		83	328	logical	UPPERCASE	3	LOWER	328.0166555	328.2638088	0.247153375	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		84	332	scornful	OBAMA	3	OBAMA	332.0175595	332.3927772	0.375217709	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		85	336	quick	SELF	1	SELF	336.0174366	336.5096663	0.49222975	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		86	340	appreciative	SELF	1	SELF	340.0174047	340.3175473	0.300142667	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		87	344	reasonable	SELF	2	SELF	344.0168171	344.3086821	0.291865041	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		88	348	solemn	OBAMA	3	OBAMA	348.0168887	348.3466128	0.329724125	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		89	352	good-natured	UPPERCASE	2	LOWER	352.0179338	352.321269	0.303335209	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		90	356	daydreamer	UPPERCASE	1	UPPER	356.0162993	356.2746062	0.258306959	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		91	360	sharp-witted	OBAMA	2	OBAMA	360.0192344	360.301031	0.281796584	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		92	364	unproductive	SELF	2	SELF	364.0184592	364.3433474	0.324888167	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		93	368	kind-hearted	UPPERCASE	2	LOWER	368.0174257	368.287888	0.270462333	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		94	372	constructive	UPPERCASE	1	LOWER	372.0169762	372.3906647	0.373688458	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		95	376	considerate	SELF	2	SELF	376.0173541	376.2598771	0.242523041	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		96	380	unconventional	OBAMA	2	OBAMA	380.0190601	380.3118197	0.292759625	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		97	384	lifeless	SELF	3	SELF	384.0185579	384.2495896	0.231031708	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		98	388	illogical	SELF	2	SELF	388.0180885	388.2985215	0.280433042	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		99	392	romantic	SELF	3	SELF	392.0177972	392.3494907	0.331693541	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		100	396	bashful	UPPERCASE	1	LOWER	396.0181311	396.2793001	0.261169	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		101	400	overcritical	SELF	1	SELF	400.0182824	400.6474497	0.629167333	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		102	404	sloppy	SELF	3	SELF	404.0179017	404.4813427	0.463440958	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		103	408	inquisitive	UPPERCASE	1	LOWER	408.0176674	408.420138	0.402470542	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		104	412	insulting	OBAMA	1	OBAMA	412.0175979	412.2919193	0.274321375	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		105	416	popular	SELF	3	SELF	416.0187461	416.459757	0.441010834	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		106	420	perfectionistic	SELF	1	SELF	420.0173883	420.2759268	0.258538416	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		107	424	smug	SELF	3	SELF	424.0169097	424.2614563	0.244546541	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		108	428	withdrawn	UPPERCASE	2	LOWER	428.0176914	428.2584669	0.240775542	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		109	432	sharp-witted	OBAMA	3	OBAMA	432.0176865	432.281451	0.263764541	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		110	436	unemotional	SELF	2	SELF	436.0170238	436.2784717	0.261447875	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		111	440	self-disciplined	OBAMA	3	OBAMA	440.0164536	440.4049866	0.388533	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		112	444	happy	SELF	1	SELF	444.0172521	444.3940271	0.376775	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		113	448	clean-cut	OBAMA	1	OBAMA	448.0160631	448.2921333	0.276070208	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		114	452	antisocial	UPPERCASE	1	LOWER	452.0181269	452.3882843	0.370157459	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		115	456	unadventurous	UPPERCASE	1	UPPER	456.0165365	456.4377712	0.421234708	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		116	460	short-tempered	SELF	2	SELF	460.0173192	460.8557508	0.838431625	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		117	464	self-confident	OBAMA	3	OBAMA	464.0197573	464.3249822	0.305224917	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		118	468	noisy	SELF	3	SELF	468.0185068	468.311701	0.293194208	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		119	472	popular	UPPERCASE	3	UPPER	472.0188063	473.014644	0.995837667	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		120	476	resentful	UPPERCASE	1	UPPER	476.0177417	476.3522773	0.334535584	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		121	480	patient	UPPERCASE	1	UPPER	480.0175565	480.2922968	0.274740333	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		122	484	efficient	SELF	1	SELF	484.0170711	484.6211276	0.604056459	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		123	488	self-conceited	OBAMA	3	OBAMA	488.0170247	488.2558582	0.238833458	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		124	492	inoffensive	OBAMA	1	OBAMA	492.0164591	492.3970168	0.38055775	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		125	496	smug	OBAMA	2	OBAMA	496.016879	496.3010413	0.284162334	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		126	500	wholesome	SELF	1	SELF	500.0162244	500.32999	0.313765583	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		127	504	demanding	UPPERCASE	1	LOWER	504.0179499	504.3937552	0.37580525	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		128	508	frank	UPPERCASE	1	UPPER	508.0188647	508.2967465	0.277881833	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		129	512	underhanded	OBAMA	3	OBAMA	512.0165483	512.3145618	0.2980135	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		130	516	unsympathetic	OBAMA	1	OBAMA	516.0171994	516.3073479	0.290148458	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		131	520	compulsive	UPPERCASE	3	UPPER	520.0169708	520.4584672	0.441496417	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		132	524	ethical	OBAMA	1	OBAMA	524.0173009	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		133	528	creative	SELF	3	SELF	528.016031	528.3027032	0.286672209	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		134	532	witty	UPPERCASE	3	LOWER	532.0175303	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		135	536	noninquisitive	SELF	2	SELF	536.0142292	None	None	None		PRACTICE	wordlist_run1.csv	0	baseline	1
+		136	540	compulsive	UPPERCASE	3	UPPER	540.0166317	540.513082	0.49645025	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		137	544	solemn	UPPERCASE	3	LOWER	544.019107	544.3461263	0.327019334	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		138	548	frivolous	UPPERCASE	1	LOWER	548.0195288	548.4029427	0.383413833	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		139	552	creative	OBAMA	2	OBAMA	552.018765	552.6579171	0.639152125	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		140	556	loud-mouthed	OBAMA	2	OBAMA	556.0183873	556.3488559	0.330468667	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		141	560	forward	OBAMA	2	OBAMA	560.0170711	560.443939	0.426867875	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		142	564	talkative	SELF	1	SELF	564.0181548	564.3738103	0.3556555	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		143	568	withdrawn	UPPERCASE	3	LOWER	568.0168433	568.3575155	0.34067225	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		144	572	compulsive	UPPERCASE	2	UPPER	572.0178341	572.3595756	0.3417415	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		145	576	lazy	OBAMA	2	OBAMA	576.0181292	576.3124573	0.294328083	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		146	580	creative	UPPERCASE	3	UPPER	580.0177256	580.3782325	0.360506875	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		147	584	versatile	UPPERCASE	2	UPPER	584.0181471	584.2793112	0.261164125	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		148	588	nice	OBAMA	1	OBAMA	588.017769	588.3122415	0.294472458	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		149	592	forgetful	UPPERCASE	3	LOWER	592.019694	592.2607758	0.241081833	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		150	596	argumentative	SELF	3	SELF	596.0183265	596.4299582	0.411631667	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		151	600	good-natured	UPPERCASE	3	UPPER	600.0181393	600.5945392	0.576399875	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
+		152	604	sincere	UPPERCASE	3	LOWER	604.0169983	604.3817417	0.364743416	f	yes	PRACTICE	wordlist_run1.csv	0	baseline	1
+		153	608	noisy	OBAMA	2	OBAMA	608.0172646	608.3296726	0.312407959	j	no	PRACTICE	wordlist_run1.csv	0	baseline	1
