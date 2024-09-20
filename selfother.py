@@ -20,20 +20,21 @@ NONRESPONSE_WINDOW = 0.0  # how many seconds to ignore responses in the beginnin
 
 FIXATION_SIZE = 0.5
 TEXT_SIZE = 0.7  # height of the letters in degrees visual angle
+TEXT_SIZE_intro = 0.4
 TEXT_DISTANCE = 0.7  # vertical distance from text to fixation cross in degrees visual angle
+detailed_intro_text = ('IN THE FOLLOWING TASK, YOU WILL BE ASKED TO RATE ONE OF THREE TYPES OF JUDGMENTS FOR DIFFERENT WORDS:\n\n'
+                       'SELF: DOES THIS WORD DESCRIBE YOU? \n'
+                       'OBAMA: DOES THIS WORD DESCRIBE FORMER U.S. PRESIDENT BARACK OBAMA?\n'
+                       'UPPERCASE: IS THIS WORD PRINTED IN UPPERCASE LETTERS?\n\n'
+                       'FOR EACH ITEM, PLEASE RESPOND WITH YES [left pointing finger] OR NO [right pointing finger].\n'
+                       'PLEASE KEEP YOUR EYES ON THE CENTRAL FIXATION POINT DURING THE TASK.\n\n'
+                       'IF THE NEXT TRIAL COMES UP AND YOU HAVE NOT YET RESPONDED TO THE PREVIOUS TRIAL,\n'
+                       'THAT IS OKAY, JUST SKIP IT AND MOVE ONTO THE NEXT ONE.\n\n'
+                       'READY?')
+
 INSTRUCTIONS = {
-    'break': u'',  # displayed during breaks
-    'SCANNER': u'',  # Instructions in scanner. Note that key name should match expInfo['setting']
-    'PRACTICE': u"""
-IN THE FOLLOWING TASK, YOU WILL BE ASKED TO RATE ONE OF THREE TYPES OF JUDGMENTS FOR DIFFERENT WORDS:
-
-SELF: DOES THIS WORD DESCRIBE YOU?
-OBAMA: DOES THIS WORD DESCRIBE FORMER U.S. PRESIDENT BARACK OBAMA?
-UPPERCASE: IS THIS WORD PRINTED IN UPPERCASE LETTERS?
-
-FOR EACH ITEM, PLEASE RESPOND WITH YES [1] OR NO [2] ON YOUR RESPONSE BOX. PLEASE KEEP YOUR EYES ON THE CENTRAL FIXATION POINT DURING THE TASK. IF THE NEXT TRIAL COMES UP AND YOU HAVE NOT YET RESPONDED TO THE PREVIOUS TRIAL, THAT'S OKAY, JUST SKIP IT AND MOVE ONTO THE NEXT ONE. 
-
-READY?"""
+    'SCANNER': 'Please press left pointing finger yes \n \nand press right pointing finger for no',  # Instructions in scanner. Note that key name should match expInfo['setting']
+    'PRACTICE': detailed_intro_text
 }
 
 # Keyboard keys
@@ -73,6 +74,7 @@ from datetime import datetime
 from pytz import timezone
 import pandas as pd
 import os
+#%%
 from tools import *
 
 #%%
@@ -80,7 +82,7 @@ expName = 'self_other'
 input_subID = 0
 # expInfo box
 expInfo = {'setting': ['SCANNER', 'PRACTICE'],
-           'words_file': ['wordlist_run1.csv', 'wordlist_run2.csv', 'wordlist_prac.csv'],
+           'words_file': ['wordlist_run1.csv', 'wordlist_run2.csv', 'wordlist_runprac.csv'],
            'subID': str(input_subID),
            'sessionID': ['baseline', 'week1', 'week2', 'week3'],
            'runID': ['1', '2', 'prac']}
@@ -95,6 +97,7 @@ results_dir = os.path.join(current_dir, 'results')
 if not os.path.exists(results_dir):
     os.makedirs(results_dir)
 sequence_file = 'sequence_run' + expInfo['runID'] + '.csv'
+runID = expInfo['runID']
 if not expInfo['runID'] == 'prac':
     runID = expInfo['runID'].zfill(2)
 subID = expInfo['subID'].zfill(3)
@@ -121,6 +124,7 @@ my_monitor.setSizePix(MON_SIZE)
 win = visual.Window(monitor=my_monitor, color=(-1, -1, -1), units='deg', fullscr=True, allowGUI=True)
 # Psychopy stimuli/objects
 fix = visual.TextStim(win, text='+', height=FIXATION_SIZE, font='Geneva', bold=True)
+text_intro = visual.TextStim(win, pos=(0, TEXT_DISTANCE), height=TEXT_SIZE_intro, font='Geneva', bold=True)
 text_condition = visual.TextStim(win, pos=(0, TEXT_DISTANCE), height=TEXT_SIZE, font='Geneva', bold=True)
 text_adjective = visual.TextStim(win, pos=(0, -TEXT_DISTANCE), height=TEXT_SIZE, font='Geneva', bold=True)
 # Hide the cursor
@@ -152,9 +156,9 @@ word_lists_shuffled = word_lists.sample(frac=1).reset_index(drop=True)
 df_sequence = pd.read_csv(sequence_file)
 # for test
 #df_sequence = pd.read_csv('sequence_run1.csv')
-df_sequence['row_number'] = df_sequence.groupby(['condition', 'valence']).cumcount()
-word_lists_shuffled['row_number'] = word_lists_shuffled.groupby(['condition', 'valence']).cumcount()
-df_trial = pd.merge(df_sequence, word_lists_shuffled, on=['condition', 'valence', 'row_number'], how='inner')
+df_sequence['row_number'] = df_sequence.groupby(['condition']).cumcount()
+word_lists_shuffled['row_number'] = word_lists_shuffled.groupby(['condition']).cumcount()
+df_trial = pd.merge(df_sequence, word_lists_shuffled, on=['condition', 'row_number'], how='inner')
 df_trial = df_trial.sort_values(by='trial_no', ascending=True)
 #%%
 #not need since judgement_types = condition_name
@@ -181,7 +185,7 @@ EXECUTE EXPERIMENT
 # Run experiment with break. Start at specified start_run
 # Show instructions
 setting = expInfo['setting']
-show_instruction(setting, INSTRUCTIONS, text_condition, win,
+show_instruction(setting, INSTRUCTIONS, text_intro, win,
                  SCANNER_RESPONSE_KEYS, SCANNER_QUIT_KEYS, LOCAL_RESPONSE_KEYS, LOCAL_QUIT_KEYS)
 run_run(setting, df_trial, max_duration,
         results_dir, resultFile_name,

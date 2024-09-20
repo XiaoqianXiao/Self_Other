@@ -29,7 +29,7 @@ def run_run(setting, df_trial, max_duration,
         thisExp.addData('judgement', trial['judgement'])
         # Prepare
         text_condition.text = trial['condition_name']
-        text_adjective.text = trial['words']
+        text_adjective.text = trial['words_present']
         onset_time = trial['onset_time']
 
         # Wait for the specified onset time
@@ -88,12 +88,12 @@ def run_run(setting, df_trial, max_duration,
         thisExp.nextEntry()
 
 #%%
-def show_instruction(setting, INSTRUCTIONS, text_condition, win,
+def show_instruction(setting, INSTRUCTIONS, text_intro, win,
                      SCANNER_RESPONSE_KEYS, SCANNER_QUIT_KEYS, LOCAL_RESPONSE_KEYS, LOCAL_QUIT_KEYS):
     """Waits for the subject to continue; then waits for the next scanner
     trigger if this is in the scanner."""
-    text_condition.text = INSTRUCTIONS
-    text_condition.draw()
+    text_intro.text = INSTRUCTIONS[setting]
+    text_intro.draw()
     win.flip()
     if setting == 'PRACTICE':  # only show instruction if there is a text to show
         key = event.waitKeys(keyList=list(LOCAL_RESPONSE_KEYS.keys()) + LOCAL_QUIT_KEYS)[
@@ -102,7 +102,7 @@ def show_instruction(setting, INSTRUCTIONS, text_condition, win,
             core.quit()
     # Wait for scanner to start -
     elif setting == 'SCANNER':
-        key = event.waitKeys(keyList=SCANNER_RESPONSE_KEYS + SCANNER_QUIT_KEYS)[0]  # synchronize with scanner
+        key = event.waitKeys(keyList=list(SCANNER_RESPONSE_KEYS.keys()) + SCANNER_QUIT_KEYS)[0]  # synchronize with scanner
         if key in SCANNER_QUIT_KEYS:
             core.quit()
     core.wait(0.5)
