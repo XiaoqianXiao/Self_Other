@@ -7,7 +7,10 @@
 <img width="772" alt="image" src="https://github.com/user-attachments/assets/bf52fa15-9c15-4d75-835e-26e52190dca1">
 
 # The experiment sequences were generate using Neurodesign[https://github.com/neuropower/neurodesign.git], the detection power are:
-	Fe	Fd	Ff	Fc
-sequence_run1	6.20	3.60	1	0.92
-sequence_run2	6.58	3.57	1	0.95![image](https://github.com/user-attachments/assets/ce206b5a-92ef-43c8-9633-bb1bcbff04bf)
+
+|    |  Fe  |  Fd  |  Ff  |  Fc  |
+|----------|----------|----------|----------|
+| sequence_run1 | 6.20 | 3.60 | 1 | 0.92 |
+| sequence_run2 | 6.20 | 3.57 | 1 | 0.95 |
+
 
