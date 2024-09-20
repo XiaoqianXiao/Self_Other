@@ -5,7 +5,7 @@
 ![image](https://github.com/user-attachments/assets/a5c20413-0075-430d-9af4-0f4b1652b961)<br>
 
 * Experiment design
-![image](./experiment_design.png)
+![image](./experiment_design.png)<br>
 
 * The experiment sequences were generate using [Neurodesign](https://github.com/neuropower/neurodesign.git), the detection power are:
 <br>
