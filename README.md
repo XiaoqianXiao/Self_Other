@@ -7,7 +7,7 @@
 * Experiment design
 ![image](./experiment_design.png)<br>
 
-* The experiment sequences were generate using [Neurodesign](https://github.com/neuropower/neurodesign.git), the criteria for both sequences are:
+* The experiment sequences were generated using [Neurodesign](https://github.com/neuropower/neurodesign.git), the criteria for both sequences are:
 <br>
   
 |       | Fe      | Fd     | Ff      | Fc      |
