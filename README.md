@@ -8,8 +8,8 @@
 
 # The experiment sequences were generate using Neurodesign[https://github.com/neuropower/neurodesign.git], the detection power are:
 
-|    |  Fe  |  Fd  |  Ff  |  Fc  |
-|----------|----------|----------|----------|
+|  haha |  Fe  |  Fd  |  Ff  |  Fc  |
+|:------------ |:--------------:| -------------:|
 | sequence_run1 | 6.20 | 3.60 | 1 | 0.92 |
 | sequence_run2 | 6.20 | 3.57 | 1 | 0.95 |
 
