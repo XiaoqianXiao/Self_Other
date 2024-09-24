@@ -16,7 +16,7 @@ def run_run(setting, df_trial, max_duration,
             results_dir, resultFile_name,
             thisExp,
             trialClock, win,
-            SCANNER_KEYS, SCANNER_QUIT_KEYS, LOCAL_KEYS, LOCAL_QUIT_KEYS, SUBJECT_KEYS,
+            SCANNER_KEYS, LOCAL_KEYS, QUIT_KEYS, SUBJECT_KEYS,
             text_condition, text_adjective, fix):
     trialClock.reset()
     for index, row in df_trial.iterrows():
@@ -46,36 +46,24 @@ def run_run(setting, df_trial, max_duration,
             keys = event.waitKeys(keyList=SCANNER_KEYS,
                                   timeStamped=trialClock,
                                   maxWait=max_duration)
-            if keys:
-                response, reaction_time = keys[0]
-                if response == SCANNER_QUIT_KEYS:
-                    resultFile_name = "tmp_" + resultFile_name
-                    resultFile_path = os.path.join(results_dir, resultFile_name)
-                    thisExp.saveAsWideText(resultFile_path)
-                    core.quit()
-                rt = reaction_time - accurate_onsetTime
-            else:
-                response = None
-                reaction_time = None
-                rt = None
                 # Record task responses
         elif setting == 'PRACTICE':
             keys = event.waitKeys(keyList=LOCAL_KEYS,
                                   timeStamped=trialClock,
                                   maxWait=max_duration)
-            if keys:
-                response, reaction_time = keys[0]
-                if response == LOCAL_QUIT_KEYS:
-                    resultFile_name = "tmp_" + resultFile_name
-                    resultFile_path = os.path.join(results_dir, resultFile_name)
-                    thisExp.saveAsWideText(resultFile_path)
-                    core.quit()
-                rt = reaction_time - accurate_onsetTime
-            else:
-                response = None
-                reaction_time = None
-                rt = None
+        if keys:
+            response, reaction_time = keys[0]
+            rt = reaction_time - accurate_onsetTime
+        else:
+            response = None
+            reaction_time = None
+            rt = None
         # Record task responses
+        if response in QUIT_KEYS:
+            resultFile_name = "tmp_" + resultFile_name
+            resultFile_path = os.path.join(results_dir, resultFile_name)
+            thisExp.saveAsWideText(resultFile_path)
+            core.quit()
         thisExp.addData('reaction_time', reaction_time)
         thisExp.addData('rt', rt)
         thisExp.addData('responses', response)
@@ -89,21 +77,21 @@ def run_run(setting, df_trial, max_duration,
 
 #%%
 def show_instruction(setting, INSTRUCTIONS, text_intro, win,
-                     SCANNER_RESPONSE_KEYS, SCANNER_QUIT_KEYS, LOCAL_RESPONSE_KEYS, LOCAL_QUIT_KEYS):
+                     SCANNER_RESPONSE_KEYS, LOCAL_RESPONSE_KEYS, QUIT_KEYS):
     """Waits for the subject to continue; then waits for the next scanner
     trigger if this is in the scanner."""
     text_intro.text = INSTRUCTIONS[setting]
     text_intro.draw()
     win.flip()
     if setting == 'PRACTICE':  # only show instruction if there is a text to show
-        key = event.waitKeys(keyList=list(LOCAL_RESPONSE_KEYS.keys()) + LOCAL_QUIT_KEYS)[
+        key = event.waitKeys(keyList=list(LOCAL_RESPONSE_KEYS.keys()) + QUIT_KEYS)[
             0]  # just pick first response, no timestamp
-        if key in LOCAL_QUIT_KEYS:
+        if key in QUIT_KEYS:
             core.quit()
     # Wait for scanner to start -
     elif setting == 'SCANNER':
-        key = event.waitKeys(keyList=list(SCANNER_RESPONSE_KEYS.keys()) + SCANNER_QUIT_KEYS)[0]  # synchronize with scanner
-        if key in SCANNER_QUIT_KEYS:
+        key = event.waitKeys(keyList=list(SCANNER_RESPONSE_KEYS.keys()) + QUIT_KEYS)[0]  # synchronize with scanner
+        if key in QUIT_KEYS:
             core.quit()
     core.wait(0.5)
 

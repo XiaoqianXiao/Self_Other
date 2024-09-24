@@ -37,30 +37,25 @@ INSTRUCTIONS = {
     'PRACTICE': detailed_intro_text
 }
 
+#%%
 # Keyboard keys
+QUIT_KEYS = ['escape']
 # for scanner
 SCANNER_TRIGGER_KEY = ['t']
 SCANNER_RESPONSE_KEYS = {'1': 'yes', '2': 'no'}
-SCANNER_QUIT_KEYS = ['F9']
+#SCANNER_QUIT_KEYS = ['F9']
 # for practice
 LOCAL_START_KEY = ['space']
 LOCAL_RESPONSE_KEYS = {'f': 'yes', 'j': 'no'}
-LOCAL_QUIT_KEYS = ['escape']
 
 SUBJECT_KEYS = {**SCANNER_RESPONSE_KEYS, **LOCAL_RESPONSE_KEYS}
-SCANNER_KEYS = SCANNER_TRIGGER_KEY + list(SCANNER_RESPONSE_KEYS.keys()) + SCANNER_QUIT_KEYS
-LOCAL_KEYS = LOCAL_START_KEY + list(LOCAL_RESPONSE_KEYS.keys()) + LOCAL_QUIT_KEYS
-
+SCANNER_KEYS = SCANNER_TRIGGER_KEY + list(SCANNER_RESPONSE_KEYS.keys()) + QUIT_KEYS
+LOCAL_KEYS = LOCAL_START_KEY + list(LOCAL_RESPONSE_KEYS.keys()) + QUIT_KEYS
+#%%
 max_duration = 2
 
 conditions = ['SELF', 'OBAMA', 'UPPERCASE']
 ORDER_FILES = ['SelfOther-001.csv', 'SelfOther-002.csv']
-
-JUDGEMENT_MAP = {  # mapping from sequence to judgement type (fixed for all)
-    'evt1': 'SELF',
-    'evt2': 'UPPERCASE',
-    'evt3': 'OBAMA'
-}
 
 """
 SET THINGS UP
@@ -84,7 +79,7 @@ input_subID = 0
 expInfo = {'setting': ['SCANNER', 'PRACTICE'],
            'words_file': ['wordlist_run1.csv', 'wordlist_run2.csv', 'wordlist_runprac.csv'],
            'subID': str(input_subID),
-           'sessionID': ['baseline', 'week1', 'week2', 'week3'],
+           'sessionID': ['T0', 'T2', 'T6', 'T12'],
            'runID': ['1', '2', 'prac']}
 dlg = gui.DlgFromDict(dictionary=expInfo, title='My Experiment')
 #order=['subID', 'sessionID', 'runID', 'setting', 'words_file'])
@@ -162,7 +157,6 @@ df_trial = pd.merge(df_sequence, word_lists_shuffled, on=['condition', 'row_numb
 df_trial = df_trial.sort_values(by='trial_no', ascending=True)
 #%%
 #not need since judgement_types = condition_name
-#df_trial['judgement_types'] = df_trial.loc[:,'condition'].replace(JUDGEMENT_MAP)
 n_cases = df_trial[df_trial['condition_name'] == 'UPPERCASE'].shape[0]  # number of UPPERCASE trials
 n_cases_half = int(math.ceil(n_cases / 2.0))  # half that number used to generate...
 cases = ['LOWER'] * n_cases_half + ['UPPER'] * (
@@ -186,16 +180,16 @@ EXECUTE EXPERIMENT
 # Show instructions
 setting = expInfo['setting']
 show_instruction(setting, INSTRUCTIONS, text_intro, win,
-                 SCANNER_RESPONSE_KEYS, SCANNER_QUIT_KEYS, LOCAL_RESPONSE_KEYS, LOCAL_QUIT_KEYS)
+                 SCANNER_RESPONSE_KEYS, LOCAL_RESPONSE_KEYS, QUIT_KEYS)
 run_run(setting, df_trial, max_duration,
         results_dir, resultFile_name,
         thisExp,
         trialClock, win,
-        SCANNER_KEYS, SCANNER_QUIT_KEYS, LOCAL_KEYS, LOCAL_QUIT_KEYS, SUBJECT_KEYS,
+        SCANNER_KEYS, LOCAL_KEYS, QUIT_KEYS, SUBJECT_KEYS,
         text_condition, text_adjective, fix)
 run_goodbye(win, fix)
 # Save the experiment data
-thisExp.saveAsWideText(resultFile_path)
+thisExp.saveAsWideText(resultFile_path+".csv", delim=',')
 thisExp.saveAsPickle(resultFile_path)
 logging.flush()
 thisExp.abort()  # Ensure the data is saved
