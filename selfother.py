@@ -79,7 +79,7 @@ input_subID = 0
 expInfo = {'setting': ['SCANNER', 'PRACTICE'],
            'words_file': ['wordlist_run1.csv', 'wordlist_run2.csv', 'wordlist_runprac.csv'],
            'subID': str(input_subID),
-           'sessionID': ['T0', 'T2', 'T6', 'T12'],
+           'sessionID': ['Baseline', 'Repeat_Baseline', 'T6', 'T12'],
            'runID': ['1', '2', 'prac']}
 dlg = gui.DlgFromDict(dictionary=expInfo, title='My Experiment')
 #order=['subID', 'sessionID', 'runID', 'setting', 'words_file'])
