@@ -91,15 +91,17 @@ def show_instruction(setting, INSTRUCTIONS, text_intro, win,
     # Wait for scanner to start -
     elif setting == 'SCANNER':
         key = event.waitKeys(keyList=list(SCANNER_RESPONSE_KEYS.keys()) + QUIT_KEYS)[0]  # synchronize with scanner
+        start_time = core.getTime()
         if key in QUIT_KEYS:
             core.quit()
     core.wait(0.5)
+    return start_time
 
 
-def run_goodbye(win, fix):
+def run_goodbye(win, fix, start_time):
+    while trialClock.getTime() - start_time < 616.5:
     fix.draw()
     win.flip()
-    core.wait(4)
     #event.waitKeys()
 
 
