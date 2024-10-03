@@ -98,7 +98,7 @@ def show_instruction(setting, INSTRUCTIONS, text_intro, win,
     return start_time
 
 
-def run_goodbye(win, fix, start_time):
+def run_goodbye(win, fix, trialClock, start_time):
     while trialClock.getTime() - start_time < 616.5:
                 fix.draw()
                 win.flip()
