@@ -33,7 +33,7 @@ detailed_intro_text = ('IN THE FOLLOWING TASK, YOU WILL BE ASKED TO RATE ONE OF 
                        'READY?')
 
 INSTRUCTIONS = {
-    'SCANNER': 'Please press left pointer finger yes \n \nand press right pointer finger for no',  # Instructions in scanner. Note that key name should match expInfo['setting']
+    'SCANNER': 'Please press right index finger yes \n \nand press right middle finger for no',  # Instructions in scanner. Note that key name should match expInfo['setting']
     'PRACTICE': detailed_intro_text
 }
 
@@ -42,11 +42,11 @@ INSTRUCTIONS = {
 QUIT_KEYS = ['escape']
 # for scanner
 SCANNER_TRIGGER_KEY = ['t']
-SCANNER_RESPONSE_KEYS = {'1': 'yes', '2': 'no'}
+SCANNER_RESPONSE_KEYS = {'g': 'yes', 'r': 'no'}
 #SCANNER_QUIT_KEYS = ['F9']
 # for practice
 LOCAL_START_KEY = ['space']
-LOCAL_RESPONSE_KEYS = {'f': 'yes', 'j': 'no'}
+LOCAL_RESPONSE_KEYS = {'j': 'yes', 'k': 'no'}
 
 SUBJECT_KEYS = {**SCANNER_RESPONSE_KEYS, **LOCAL_RESPONSE_KEYS}
 SCANNER_KEYS = SCANNER_TRIGGER_KEY + list(SCANNER_RESPONSE_KEYS.keys()) + QUIT_KEYS
