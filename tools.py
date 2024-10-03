@@ -77,7 +77,7 @@ def run_run(setting, df_trial, max_duration,
 
 #%%
 def show_instruction(setting, INSTRUCTIONS, text_intro, win,
-                     SCANNER_RESPONSE_KEYS, LOCAL_RESPONSE_KEYS, QUIT_KEYS):
+                     SCANNER_TRIGGER_KEY, LOCAL_RESPONSE_KEYS, QUIT_KEYS):
     """Waits for the subject to continue; then waits for the next scanner
     trigger if this is in the scanner."""
     text_intro.text = INSTRUCTIONS[setting]
@@ -90,7 +90,7 @@ def show_instruction(setting, INSTRUCTIONS, text_intro, win,
             core.quit()
     # Wait for scanner to start -
     elif setting == 'SCANNER':
-        key = event.waitKeys(keyList=list(SCANNER_RESPONSE_KEYS.keys()) + QUIT_KEYS)[0]  # synchronize with scanner
+        key = event.waitKeys(keyList=SCANNER_TRIGGER_KEY + QUIT_KEYS)[0]  # synchronize with scanner
         start_time = core.getTime()
         if key in QUIT_KEYS:
             core.quit()
