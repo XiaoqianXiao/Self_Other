@@ -116,7 +116,7 @@ my_monitor = monitors.Monitor('testMonitor', width=MON_WIDTH,
 #%%
 my_monitor.setSizePix(MON_SIZE)
 #%%
-win = visual.Window(monitor=my_monitor, color=(-1, -1, -1), units='deg', fullscr=True, allowGUI=True)
+win = visual.Window(monitor=my_monitor, color=(-1, -1, -1), units='deg', fullscr=True, allowGUI=True, screen=1)
 # Psychopy stimuli/objects
 fix = visual.TextStim(win, text='+', height=FIXATION_SIZE, font='Geneva', bold=True)
 text_intro = visual.TextStim(win, pos=(0, TEXT_DISTANCE), height=TEXT_SIZE_intro, font='Geneva', bold=True)
