@@ -185,7 +185,7 @@ run_run(setting, df_trial, max_duration,
         results_dir, resultFile_name,
         thisExp,
         trialClock, win,
-        SCANNER_KEYS, LOCAL_KEYS, QUIT_KEYS, SUBJECT_KEYS,
+        SCANNER_TRIGGER_KEY, LOCAL_KEYS, QUIT_KEYS, SUBJECT_KEYS,
         text_condition, text_adjective, fix)
 run_goodbye(win, fix, start_time)
 # Save the experiment data
