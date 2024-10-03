@@ -97,7 +97,7 @@ if not expInfo['runID'] == 'prac':
     runID = expInfo['runID'].zfill(2)
 subID = expInfo['subID'].zfill(3)
 sessionID = expInfo['sessionID']
-experiment_time = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+experiment_time = datetime.now().strftime("%Y-%m-%d_%H%M%S")
 resultFile_name = 'sub-' + subID + '_ses-' + sessionID + '_run-' + runID + '_time-' + experiment_time
 thisExp = data.ExperimentHandler(
     name=expName, version='0.1',
