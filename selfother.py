@@ -179,7 +179,7 @@ EXECUTE EXPERIMENT
 # Run experiment with break. Start at specified start_run
 # Show instructions
 setting = expInfo['setting']
-show_instruction(setting, INSTRUCTIONS, text_intro, win,
+start_time = show_instruction(setting, INSTRUCTIONS, text_intro, win,
                  SCANNER_RESPONSE_KEYS, LOCAL_RESPONSE_KEYS, QUIT_KEYS)
 run_run(setting, df_trial, max_duration,
         results_dir, resultFile_name,
@@ -187,7 +187,7 @@ run_run(setting, df_trial, max_duration,
         trialClock, win,
         SCANNER_KEYS, LOCAL_KEYS, QUIT_KEYS, SUBJECT_KEYS,
         text_condition, text_adjective, fix)
-run_goodbye(win, fix)
+run_goodbye(win, fix, start_time)
 # Save the experiment data
 thisExp.saveAsWideText(resultFile_path+".csv", delim=',')
 thisExp.saveAsPickle(resultFile_path)
