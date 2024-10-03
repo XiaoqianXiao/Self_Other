@@ -187,7 +187,7 @@ run_run(setting, df_trial, max_duration,
         trialClock, win,
         SCANNER_KEYS, LOCAL_KEYS, QUIT_KEYS, SUBJECT_KEYS,
         text_condition, text_adjective, fix)
-run_goodbye(win, fix, start_time)
+run_goodbye(win, fix, trialClock, start_time)
 # Save the experiment data
 thisExp.saveAsWideText(resultFile_path+".csv", delim=',')
 thisExp.saveAsPickle(resultFile_path)
