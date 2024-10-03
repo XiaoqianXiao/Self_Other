@@ -180,12 +180,12 @@ EXECUTE EXPERIMENT
 # Show instructions
 setting = expInfo['setting']
 start_time = show_instruction(setting, INSTRUCTIONS, text_intro, win,
-                 SCANNER_RESPONSE_KEYS, LOCAL_RESPONSE_KEYS, QUIT_KEYS)
+                 SCANNER_TRIGGER_KEY, LOCAL_RESPONSE_KEYS, QUIT_KEYS)
 run_run(setting, df_trial, max_duration,
         results_dir, resultFile_name,
         thisExp,
         trialClock, win,
-        SCANNER_TRIGGER_KEY, LOCAL_KEYS, QUIT_KEYS, SUBJECT_KEYS,
+        SCANNER_KEY, LOCAL_KEYS, QUIT_KEYS, SUBJECT_KEYS,
         text_condition, text_adjective, fix)
 run_goodbye(win, fix, start_time)
 # Save the experiment data
