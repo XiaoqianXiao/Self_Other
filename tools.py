@@ -99,6 +99,6 @@ def show_instruction(setting, INSTRUCTIONS, text_intro, win,
 def run_goodbye(win, fix):
     fix.draw()
     win.flip()
-    core.wait(0.5)
+    core.wait(0.2)
 def list_permutations(lst):
     return list(permutations(lst))
