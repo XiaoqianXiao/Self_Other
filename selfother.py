@@ -179,20 +179,32 @@ EXECUTE EXPERIMENT
 # Run experiment with break. Start at specified start_run
 # Show instructions
 setting = expInfo['setting']
-start_time = show_instruction(setting, INSTRUCTIONS, text_intro, win,
-                 SCANNER_TRIGGER_KEY, LOCAL_RESPONSE_KEYS, QUIT_KEYS)
+show_instruction(setting, INSTRUCTIONS, text_intro, win,
+                 SCANNER_TRIGGER_KEY, LOCAL_START_KEY, QUIT_KEYS)
+start_time = globalClock.getTime()
 run_run(setting, df_trial, max_duration,
         results_dir, resultFile_name,
         thisExp,
         trialClock, win,
         SCANNER_KEYS, LOCAL_KEYS, QUIT_KEYS, SUBJECT_KEYS,
         text_condition, text_adjective, fix)
-run_goodbye(win, fix, trialClock, start_time)
+end_time = globalClock.getTime()
+run_goodbye(win, fix)
 # Save the experiment data
 thisExp.saveAsWideText(resultFile_path+".csv", delim=',')
 thisExp.saveAsPickle(resultFile_path)
 logging.flush()
 thisExp.abort()  # Ensure the data is saved
+# Keep the window open until the target time is reached
+if setting == 'PRACTICE':
+    target_time = 104
+else:
+    target_time = 616
+# Wait for the remaining time before quitting
+remaining_time = target_time - (end_time - start_time)
+print(remaining_time)
+if remaining_time > 0:
+    core.wait(remaining_time)
 win.close()
 core.quit()
 # Finished, yay!

@@ -77,33 +77,28 @@ def run_run(setting, df_trial, max_duration,
 
 #%%
 def show_instruction(setting, INSTRUCTIONS, text_intro, win,
-                     SCANNER_TRIGGER_KEY, LOCAL_RESPONSE_KEYS, QUIT_KEYS):
+                     SCANNER_TRIGGER_KEY, LOCAL_START_KEY, QUIT_KEYS):
     """Waits for the subject to continue; then waits for the next scanner
     trigger if this is in the scanner."""
     text_intro.text = INSTRUCTIONS[setting]
     text_intro.draw()
     win.flip()
     if setting == 'PRACTICE':  # only show instruction if there is a text to show
-        key = event.waitKeys(keyList=list(LOCAL_RESPONSE_KEYS.keys()) + QUIT_KEYS)[
+        key = event.waitKeys(keyList=LOCAL_START_KEY + QUIT_KEYS)[
             0]  # just pick first response, no timestamp
         if key in QUIT_KEYS:
             core.quit()
     # Wait for scanner to start -
     elif setting == 'SCANNER':
         key = event.waitKeys(keyList=SCANNER_TRIGGER_KEY + QUIT_KEYS)[0]  # synchronize with scanner
-        start_time = core.getTime()
         if key in QUIT_KEYS:
             core.quit()
     core.wait(0.5)
-    return start_time
 
 
-def run_goodbye(win, fix, trialClock, start_time):
-    while trialClock.getTime() - start_time < 616.5:
-                fix.draw()
-                win.flip()
-                #event.waitKeys()
-
-
+def run_goodbye(win, fix):
+    fix.draw()
+    win.flip()
+    core.wait(0.5)
 def list_permutations(lst):
     return list(permutations(lst))
