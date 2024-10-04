@@ -1,6 +1,8 @@
 # Self_Other
 
 * Work on psychopy v2024.1.5 on Mac OS<br>
+* For practice: J for yes and K for no; press space to start.
+* For scan: ??r g for yes and for no; wait for trigger to start
 * Mark reported error for windows as follows for last version, please notice that could still true for current version. Test it and add codes for different operating system if needed.
 ![image](https://github.com/user-attachments/assets/a5c20413-0075-430d-9af4-0f4b1652b961)<br>
 

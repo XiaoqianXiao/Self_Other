@@ -26,7 +26,7 @@ detailed_intro_text = ('IN THE FOLLOWING TASK, YOU WILL BE ASKED TO RATE ONE OF 
                        'SELF: DOES THIS WORD DESCRIBE YOU? \n'
                        'OBAMA: DOES THIS WORD DESCRIBE FORMER U.S. PRESIDENT BARACK OBAMA?\n'
                        'UPPERCASE: IS THIS WORD PRINTED IN UPPERCASE LETTERS?\n\n'
-                       'FOR EACH ITEM, PLEASE RESPOND WITH YES [left pointer finger] OR NO [right pointer finger].\n'
+                       'FOR EACH ITEM, PLEASE RESPOND WITH YES [right pointer finger] OR NO [right middle finger].\n'
                        'PLEASE KEEP YOUR EYES ON THE CENTRAL FIXATION POINT DURING THE TASK.\n\n'
                        'IF THE NEXT TRIAL COMES UP AND YOU HAVE NOT YET RESPONDED TO THE PREVIOUS TRIAL,\n'
                        'THAT IS OKAY, JUST SKIP IT AND MOVE ONTO THE NEXT ONE.\n\n'

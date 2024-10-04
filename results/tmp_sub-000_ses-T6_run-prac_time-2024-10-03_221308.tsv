@@ -1,4 +1,0 @@
-﻿thisRow.t	notes	trial_no	onset_time	words	condition_name	valence	judgement	accurate_onsetTime	reaction_time	rt	responses	answer	setting	words_file	subID	sessionID	runID	
-		1	0.0	stern	SELF	2	SELF	0.028020500001730397	None	None	None		PRACTICE	wordlist_runprac.csv	0	T6	prac	
-		2	2.8	good	UPPERCASE	1	LOWER	2.807196292007575	2.9403909579996252	0.13319466599205043	k	no	PRACTICE	wordlist_runprac.csv	0	T6	prac	
-		3	6.5	noisy	UPPERCASE	3	UPPER	6.540573125006631										
