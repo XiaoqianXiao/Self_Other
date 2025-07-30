@@ -189,7 +189,7 @@ run_run(setting, df_trial, max_duration,
         SCANNER_KEYS, LOCAL_KEYS, QUIT_KEYS, SUBJECT_KEYS,
         text_condition, text_adjective, fix)
 end_time = globalClock.getTime()
-run_goodbye(win, fix)
+run_goodbye(win, fix, thisExp, feedback_duration_sec=5.0)
 # Save the experiment data
 thisExp.saveAsWideText(resultFile_path+".csv", delim=',')
 thisExp.saveAsPickle(resultFile_path)
@@ -197,9 +197,9 @@ logging.flush()
 thisExp.abort()  # Ensure the data is saved
 # Keep the window open until the target time is reached
 if setting == 'PRACTICE':
-    target_time = 104
+    target_time = 104 + 5
 else:
-    target_time = 616
+    target_time = 616 + 5
 # Wait for the remaining time before quitting
 remaining_time = target_time - (end_time - start_time)
 print(remaining_time)
