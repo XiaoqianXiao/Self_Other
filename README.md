@@ -24,4 +24,3 @@
 ------------------------------------------------------------------------------------------------------------------------
 # modified on 2025-07-30
 - This version added post on screen for accuracy of UPPERCASE task right after each run 
-- You can also find the accuracy in the last line of the experiment log of each run (path: /Self_Other/results/*.log)
