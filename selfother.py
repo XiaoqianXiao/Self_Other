@@ -43,7 +43,6 @@ QUIT_KEYS = ['escape']
 # for scanner
 SCANNER_TRIGGER_KEY = ['t']
 SCANNER_RESPONSE_KEYS = {'g': 'yes', 'r': 'no'}
-#SCANNER_QUIT_KEYS = ['F9']
 # for practice
 LOCAL_START_KEY = ['space']
 LOCAL_RESPONSE_KEYS = {'j': 'yes', 'k': 'no'}
@@ -51,6 +50,7 @@ LOCAL_RESPONSE_KEYS = {'j': 'yes', 'k': 'no'}
 SUBJECT_KEYS = {**SCANNER_RESPONSE_KEYS, **LOCAL_RESPONSE_KEYS}
 SCANNER_KEYS = SCANNER_TRIGGER_KEY + list(SCANNER_RESPONSE_KEYS.keys()) + QUIT_KEYS
 LOCAL_KEYS = LOCAL_START_KEY + list(LOCAL_RESPONSE_KEYS.keys()) + QUIT_KEYS
+
 #%%
 max_duration = 2
 
@@ -86,7 +86,7 @@ dlg = gui.DlgFromDict(dictionary=expInfo, title='My Experiment')
 if dlg.OK == False:
     core.quit()
 
-#Initialize the results file
+# Initialize the results file
 current_dir = os.getcwd()
 results_dir = os.path.join(current_dir, 'results')
 if not os.path.exists(results_dir):
@@ -109,19 +109,19 @@ thisExp = data.ExperimentHandler(
 resultFile_path = os.path.join(results_dir, resultFile_name)
 logFile = logging.LogFile(resultFile_path + ".log", level=logging.EXP)
 logging.console.setLevel(logging.ERROR)
+
 #%%
 # Psychopy window
-my_monitor = monitors.Monitor('testMonitor', width=MON_WIDTH,
-                              distance=MON_DISTANCE)  # Create monitor object from the variables above. This is needed to control size of stimuli in degrees.
-#%%
+my_monitor = monitors.Monitor('testMonitor', width=MON_WIDTH, distance=MON_DISTANCE)
 my_monitor.setSizePix(MON_SIZE)
-#%%
 win = visual.Window(monitor=my_monitor, color=(-1, -1, -1), units='deg', fullscr=True, allowGUI=True, screen=1)
+
 # Psychopy stimuli/objects
 fix = visual.TextStim(win, text='+', height=FIXATION_SIZE, font='Geneva', bold=True)
 text_intro = visual.TextStim(win, pos=(0, TEXT_DISTANCE), height=TEXT_SIZE_intro, font='Geneva', bold=True)
 text_condition = visual.TextStim(win, pos=(0, TEXT_DISTANCE), height=TEXT_SIZE, font='Geneva', bold=True)
 text_adjective = visual.TextStim(win, pos=(0, -TEXT_DISTANCE), height=TEXT_SIZE, font='Geneva', bold=True)
+
 # Hide the cursor
 win.mouseVisible = False
 
@@ -132,79 +132,88 @@ lst = list(range(1, 4))
 condition_lists = list_permutations(lst)
 # assign condition using the subjectID
 condition_category = int(expInfo['subID']) % len(list_permutations(lst))
-# for test
-#condition_category = int('001') % len(list_permutations(lst))
 condition_list = condition_lists[condition_category]
-#load words
+
+# load words
 word_lists = pd.read_csv(expInfo['words_file'])
-# for test
-#word_lists = pd.read_csv('wordlist_run1.csv')
 word_lists.loc[word_lists['condition_design'] == 1, 'condition'] = condition_list[0]
 word_lists.loc[word_lists['condition_design'] == 2, 'condition'] = condition_list[1]
 word_lists.loc[word_lists['condition_design'] == 3, 'condition'] = condition_list[2]
-#%%
+
 word_lists['condition'] = word_lists['condition'].astype(int)
 word_lists['condition_name'] = word_lists['condition'].apply(lambda x: conditions[x - 1])
 word_lists_shuffled = word_lists.sample(frac=1).reset_index(drop=True)
-#%%
+
 # prepare sequence
 df_sequence = pd.read_csv(sequence_file)
-# for test
-#df_sequence = pd.read_csv('sequence_run1.csv')
 df_sequence['row_number'] = df_sequence.groupby(['condition']).cumcount()
 word_lists_shuffled['row_number'] = word_lists_shuffled.groupby(['condition']).cumcount()
 df_trial = pd.merge(df_sequence, word_lists_shuffled, on=['condition', 'row_number'], how='inner')
 df_trial = df_trial.sort_values(by='trial_no', ascending=True)
-#%%
-#not need since judgement_types = condition_name
+
+# Assign UPPER/LOWER within UPPERCASE condition
 n_cases = df_trial[df_trial['condition_name'] == 'UPPERCASE'].shape[0]  # number of UPPERCASE trials
 n_cases_half = int(math.ceil(n_cases / 2.0))  # half that number used to generate...
-cases = ['LOWER'] * n_cases_half + ['UPPER'] * (
-        n_cases - n_cases_half)  # list of cases for UPPERCASE trials, half of each.
+cases = ['LOWER'] * n_cases_half + ['UPPER'] * (n_cases - n_cases_half)  # half of each (LOWER gets the odd)
 random.shuffle(cases)
 df_trial['judgement'] = df_trial['condition_name']
 df_trial.loc[df_trial['condition_name'] == 'UPPERCASE', 'judgement'] = cases
-#%%
+
+# Presented word casing
 df_trial['words_present'] = df_trial['words'].str.lower()
 df_trial.loc[df_trial['judgement'] == 'UPPER', 'words_present'] = df_trial['words'].str.upper()
-#%%
-# Clock for timing
+
+# Clocks
 globalClock = core.Clock()
 trialClock = core.Clock()
 
 """
 EXECUTE EXPERIMENT
 """
-#%%
-# Run experiment with break. Start at specified start_run
 # Show instructions
 setting = expInfo['setting']
 show_instruction(setting, INSTRUCTIONS, text_intro, win,
                  SCANNER_TRIGGER_KEY, LOCAL_START_KEY, QUIT_KEYS)
+
 start_time = globalClock.getTime()
+
+# Run trials (computes and stores accuracy in thisExp.extraInfo)
 run_run(setting, df_trial, max_duration,
         results_dir, resultFile_name,
         thisExp,
         trialClock, win,
         SCANNER_KEYS, LOCAL_KEYS, QUIT_KEYS, SUBJECT_KEYS,
         text_condition, text_adjective, fix)
+
 end_time = globalClock.getTime()
-run_goodbye(win, fix, thisExp, feedback_duration_sec=5.0)
+
+# Optional: a short goodbye / fixation flash in the full-screen window; no feedback here
+run_goodbye(win, fix, thisExp, feedback_duration_sec=0.0)
+
 # Save the experiment data
-thisExp.saveAsWideText(resultFile_path+".csv", delim=',')
+thisExp.saveAsWideText(resultFile_path + ".csv", delim=',')
 thisExp.saveAsPickle(resultFile_path)
 logging.flush()
 thisExp.abort()  # Ensure the data is saved
-# Keep the window open until the target time is reached
+
+# Keep the window open until the target time is reached (task timing only)
 if setting == 'PRACTICE':
-    target_time = 104 + 5
+    target_time = 104
 else:
-    target_time = 616 + 5
-# Wait for the remaining time before quitting
+    target_time = 616
+
+# Wait for the remaining time before quitting the full-screen window
 remaining_time = target_time - (end_time - start_time)
 print(remaining_time)
 if remaining_time > 0:
     core.wait(remaining_time)
+
+# Close the full-screen task window
 win.close()
+
+# ---- Show feedback AFTER exiting the experiment screen ----
+# Wait for any key to close the feedback window (set wait_for_key=False for timed display)
+show_postrun_feedback(thisExp, wait_for_key=True, duration_sec=5.0)
+
 core.quit()
 # Finished, yay!
