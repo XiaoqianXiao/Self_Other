@@ -25,6 +25,49 @@ Usage
    - Output columns include:
        trial_no, onset_time, words, condition_name, valence,
        judgement, rt, responses, words_file, subID, sessionID, runID
+    - Output Columns
+    --------------
+    trial_no : str
+        Trial index
+
+    onset_time : float (seconds)
+        Stimulus onset time relative to the first scanner trigger ('t')
+
+    words : str
+        The stimulus word shown on that trial. 
+
+    condition_name : str
+        Experimental condition label 
+        (e.g., SELF, OBAMA, UPPERCASE).
+
+    valence : str or numeric
+        Valence label  
+        (e.g., positive/negative/neutral or numeric rating).
+
+    judgement : str or numeric
+        Participant’s judgement recorded if 
+        - condition_name == 'UPPERCASE',
+        - or the same as the condition_name.
+
+    rt : float (seconds)
+        - Reaction time if the participant responded with 'g' or 'r' after the stimulus onset and before the next stimulus onset.
+        - Otherwise NaN.
+
+    responses : str
+        - Key pressed by the participant ('g' or 'r').
+        - NaN if no valid response was detected.
+
+    words_file : str
+        Source file or stimulus list filename.
+
+    subID : str
+        Subject ID parsed from filename (sub-XXX).
+
+    sessionID : str
+        Session ID parsed from filename (ses-XXX).
+
+    runID : str
+        Run ID parsed from filename (run-XXX).
 
 Notes
 -----
