@@ -1,4 +1,5 @@
 # Self_Other
+# Use sum_results.py to generate summary for further analysis. Detailed descriptions of each value and column can be found within the script.
 
 * Work on psychopy v2024.1.5 on Mac OS<br>
 * For practice: J for yes and K for no; press space to start.
@@ -23,4 +24,7 @@
     * Fc: how well the conditions are “counterbalanced” in time
 ------------------------------------------------------------------------------------------------------------------------
 # modified on 2025-07-30
-- This version added post on screen for accuracy of UPPERCASE task right after each run 
+- This version added post on screen for accuracy of UPPERCASE task right after each run
+------------------------------------------------------------------------------------------------------------------------
+# modified on 2026-02-03
+- This version added sum_results.py to help get the results .csv files for analysis
