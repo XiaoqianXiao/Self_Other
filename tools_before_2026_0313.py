@@ -55,11 +55,9 @@ def run_run(setting, df_trial, max_duration,
 
         # ---- Collect response ----
         if setting == 'SCANNER':
-            # Filter out the trigger key 't' for the trial response
-            valid_response_keys = [k for k in SCANNER_KEYS if k != 't'] 
-            keys = event.waitKeys(keyList=valid_response_keys,
-                                timeStamped=trialClock,
-                                maxWait=max_duration)
+            keys = event.waitKeys(keyList=SCANNER_KEYS,
+                                  timeStamped=trialClock,
+                                  maxWait=max_duration)
         elif setting == 'PRACTICE':
             keys = event.waitKeys(keyList=LOCAL_KEYS,
                                   timeStamped=trialClock,
