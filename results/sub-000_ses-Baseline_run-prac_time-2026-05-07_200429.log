@@ -1,0 +1,323 @@
+10.9118 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+10.9222 	WARNING 	Requested an unavailable screen number - using first available.
+10.9233 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1512, 982]. Using actual size
+12.1594 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+12.1598 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d880>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d820>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d610>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fa2c0ee4190>, multiSample=False, name='window1', numSamples=2, pos=[378.0, 245.5], screen=1, size=array([3024, 1964]), stencilBits=0, stereo=False, title='PsychoPy', units='deg', useFBO=False, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+12.1599 	EXP 	window1: backgroundImage = None
+12.1599 	EXP 	window1: backgroundFit = 'cover'
+12.1604 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d9a0>
+12.1881 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='Geneva', fontFiles=[], height=0.5, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='deg', win=Window(...), wrapWidth=15.0)
+12.1883 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d9a0>
+12.1943 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='Geneva', fontFiles=[], height=0.4, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0. , 0.7]), rgb=UNKNOWN, text='Hello World', units='deg', win=Window(...), wrapWidth=15.0)
+12.1944 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d9a0>
+12.1997 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='Geneva', fontFiles=[], height=0.7, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0. , 0.7]), rgb=UNKNOWN, text='Hello World', units='deg', win=Window(...), wrapWidth=15.0)
+12.1998 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d9a0>
+12.2017 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='Geneva', fontFiles=[], height=0.7, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0. , -0.7]), rgb=UNKNOWN, text='Hello World', units='deg', win=Window(...), wrapWidth=15.0)
+12.2038 	EXP 	window1: mouseVisible = False
+12.2410 	WARNING 	t of last frame was 81.68ms (=1/12)
+12.2410 	EXP 	unnamed TextStim: height = 0.4
+12.2410 	EXP 	unnamed TextStim: height = 0.4
+12.2410 	EXP 	unnamed TextStim: height = 0.4
+12.2410 	EXP 	unnamed TextStim: text = 'IN THE FOLLOWING TASK, YOU WILL BE ASKED TO RATE ONE OF THREE TYPES OF JUDGMENTS FOR DIFFERENT WORDS:\n\nSELF: DOES THIS WORD DESCRIBE YOU? \nOBAMA: DOES THIS WORD DESCRIBE FORMER U.S. PRESIDENT BARACK OBAMA?\nUPPERCASE: IS THIS WORD PRINTED IN UPPERCASE LETTERS?\n\nFOR EACH ITEM, PLEASE RESPOND WITH YES [right pointer finger] OR \nNO [right middle finger].\nPLEASE KEEP YOUR EYES ON THE CENTRAL FIXATION POINT DURING THE TASK.\n\nIF THE NEXT TRIAL COMES UP AND YOU HAVE NOT YET RESPONDED TO THE PREVIOUS TRIAL,\nTHAT IS OKAY, JUST SKIP IT AND MOVE ONTO THE NEXT ONE.\n\nREADY?'
+24.9264 	DATA 	Keypress: t
+27.7644 	DATA 	Keypress: s
+28.7670 	DATA 	Keypress: space
+29.2903 	WARNING 	t of last frame was 17049.26ms (=1/0)
+29.2903 	EXP 	unnamed TextStim: height = 0.7
+29.2903 	EXP 	unnamed TextStim: height = 0.7
+29.2903 	EXP 	unnamed TextStim: height = 0.7
+29.2903 	EXP 	unnamed TextStim: text = 'SELF'
+29.2903 	EXP 	unnamed TextStim: height = 0.7
+29.2903 	EXP 	unnamed TextStim: height = 0.7
+29.2903 	EXP 	unnamed TextStim: height = 0.7
+29.2903 	EXP 	unnamed TextStim: text = 'domineering'
+29.2903 	EXP 	unnamed TextStim: autoDraw = True
+30.5830 	DATA 	Keypress: k
+30.5967 	WARNING 	t of last frame was 1306.43ms (=1/0)
+30.5967 	EXP 	unnamed TextStim: autoDraw = True
+32.0790 	WARNING 	t of last frame was 1482.31ms (=1/0)
+32.0790 	EXP 	unnamed TextStim: height = 0.7
+32.0790 	EXP 	unnamed TextStim: height = 0.7
+32.0790 	EXP 	unnamed TextStim: height = 0.7
+32.0790 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+32.0790 	EXP 	unnamed TextStim: height = 0.7
+32.0790 	EXP 	unnamed TextStim: height = 0.7
+32.0790 	EXP 	unnamed TextStim: height = 0.7
+32.0790 	EXP 	unnamed TextStim: text = 'ENTERPRISING'
+32.0790 	EXP 	unnamed TextStim: autoDraw = True
+33.2883 	DATA 	Keypress: j
+33.2996 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+33.2996 	EXP 	unnamed TextStim: autoDraw = True
+35.7854 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+35.7854 	EXP 	unnamed TextStim: height = 0.7
+35.7854 	EXP 	unnamed TextStim: height = 0.7
+35.7854 	EXP 	unnamed TextStim: height = 0.7
+35.7854 	EXP 	unnamed TextStim: text = 'NONCHALANT'
+35.7854 	EXP 	unnamed TextStim: autoDraw = True
+36.6681 	DATA 	Keypress: t
+37.0576 	DATA 	Keypress: j
+37.0671 	EXP 	unnamed TextStim: autoDraw = True
+39.4832 	EXP 	unnamed TextStim: height = 0.7
+39.4832 	EXP 	unnamed TextStim: height = 0.7
+39.4832 	EXP 	unnamed TextStim: height = 0.7
+39.4832 	EXP 	unnamed TextStim: text = 'OBAMA'
+39.4832 	EXP 	unnamed TextStim: height = 0.7
+39.4832 	EXP 	unnamed TextStim: height = 0.7
+39.4832 	EXP 	unnamed TextStim: height = 0.7
+39.4832 	EXP 	unnamed TextStim: text = 'down-hearted'
+39.4832 	EXP 	unnamed TextStim: autoDraw = True
+39.9458 	DATA 	Keypress: f
+40.4262 	DATA 	Keypress: k
+40.4291 	EXP 	unnamed TextStim: autoDraw = True
+44.7880 	EXP 	unnamed TextStim: height = 0.7
+44.7880 	EXP 	unnamed TextStim: height = 0.7
+44.7880 	EXP 	unnamed TextStim: height = 0.7
+44.7880 	EXP 	unnamed TextStim: text = 'SELF'
+44.7880 	EXP 	unnamed TextStim: height = 0.7
+44.7880 	EXP 	unnamed TextStim: height = 0.7
+44.7880 	EXP 	unnamed TextStim: height = 0.7
+44.7880 	EXP 	unnamed TextStim: text = 'listless'
+44.7880 	EXP 	unnamed TextStim: autoDraw = True
+45.4829 	DATA 	Keypress: k
+45.4855 	EXP 	unnamed TextStim: autoDraw = True
+47.1797 	EXP 	unnamed TextStim: height = 0.7
+47.1797 	EXP 	unnamed TextStim: height = 0.7
+47.1797 	EXP 	unnamed TextStim: height = 0.7
+47.1797 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+47.1797 	EXP 	unnamed TextStim: height = 0.7
+47.1797 	EXP 	unnamed TextStim: height = 0.7
+47.1797 	EXP 	unnamed TextStim: height = 0.7
+47.1797 	EXP 	unnamed TextStim: text = 'soft-hearted'
+47.1797 	EXP 	unnamed TextStim: autoDraw = True
+48.0039 	DATA 	Keypress: k
+48.0065 	EXP 	unnamed TextStim: autoDraw = True
+49.8851 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+49.8851 	EXP 	unnamed TextStim: height = 0.7
+49.8851 	EXP 	unnamed TextStim: height = 0.7
+49.8851 	EXP 	unnamed TextStim: height = 0.7
+49.8851 	EXP 	unnamed TextStim: text = 'clean-cut'
+49.8851 	EXP 	unnamed TextStim: autoDraw = True
+50.7150 	DATA 	Keypress: k
+50.7172 	EXP 	unnamed TextStim: autoDraw = True
+51.9799 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+51.9799 	EXP 	unnamed TextStim: height = 0.7
+51.9799 	EXP 	unnamed TextStim: height = 0.7
+51.9799 	EXP 	unnamed TextStim: height = 0.7
+51.9799 	EXP 	unnamed TextStim: text = 'shrewd'
+51.9799 	EXP 	unnamed TextStim: autoDraw = True
+52.7528 	DATA 	Keypress: k
+52.7552 	EXP 	unnamed TextStim: autoDraw = True
+56.0843 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+56.0843 	EXP 	unnamed TextStim: height = 0.7
+56.0843 	EXP 	unnamed TextStim: height = 0.7
+56.0843 	EXP 	unnamed TextStim: height = 0.7
+56.0843 	EXP 	unnamed TextStim: text = 'INOFFENSIVE'
+56.0843 	EXP 	unnamed TextStim: autoDraw = True
+57.7067 	DATA 	Keypress: j
+57.7196 	EXP 	unnamed TextStim: autoDraw = True
+59.6802 	EXP 	unnamed TextStim: height = 0.7
+59.6802 	EXP 	unnamed TextStim: height = 0.7
+59.6802 	EXP 	unnamed TextStim: height = 0.7
+59.6802 	EXP 	unnamed TextStim: text = 'SELF'
+59.6802 	EXP 	unnamed TextStim: height = 0.7
+59.6802 	EXP 	unnamed TextStim: height = 0.7
+59.6802 	EXP 	unnamed TextStim: height = 0.7
+59.6802 	EXP 	unnamed TextStim: text = 'uncongenial'
+59.6802 	EXP 	unnamed TextStim: autoDraw = True
+60.4089 	DATA 	Keypress: k
+60.4110 	EXP 	unnamed TextStim: autoDraw = True
+63.2871 	EXP 	unnamed TextStim: height = 0.7
+63.2871 	EXP 	unnamed TextStim: height = 0.7
+63.2871 	EXP 	unnamed TextStim: height = 0.7
+63.2871 	EXP 	unnamed TextStim: text = 'OBAMA'
+63.2871 	EXP 	unnamed TextStim: height = 0.7
+63.2871 	EXP 	unnamed TextStim: height = 0.7
+63.2871 	EXP 	unnamed TextStim: height = 0.7
+63.2871 	EXP 	unnamed TextStim: text = 'spendthrift'
+63.2871 	EXP 	unnamed TextStim: autoDraw = True
+64.0680 	DATA 	Keypress: k
+64.0709 	EXP 	unnamed TextStim: autoDraw = True
+69.3821 	EXP 	unnamed TextStim: height = 0.7
+69.3821 	EXP 	unnamed TextStim: height = 0.7
+69.3821 	EXP 	unnamed TextStim: height = 0.7
+69.3821 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+69.3821 	EXP 	unnamed TextStim: height = 0.7
+69.3821 	EXP 	unnamed TextStim: height = 0.7
+69.3821 	EXP 	unnamed TextStim: height = 0.7
+69.3821 	EXP 	unnamed TextStim: text = 'UNTIRING'
+69.3821 	EXP 	unnamed TextStim: autoDraw = True
+70.2882 	DATA 	Keypress: j
+70.2912 	EXP 	unnamed TextStim: autoDraw = True
+73.8822 	EXP 	unnamed TextStim: height = 0.7
+73.8822 	EXP 	unnamed TextStim: height = 0.7
+73.8822 	EXP 	unnamed TextStim: height = 0.7
+73.8822 	EXP 	unnamed TextStim: text = 'SELF'
+73.8822 	EXP 	unnamed TextStim: height = 0.7
+73.8822 	EXP 	unnamed TextStim: height = 0.7
+73.8822 	EXP 	unnamed TextStim: height = 0.7
+73.8822 	EXP 	unnamed TextStim: text = 'maladjusted'
+73.8822 	EXP 	unnamed TextStim: autoDraw = True
+74.6248 	DATA 	Keypress: k
+74.6270 	EXP 	unnamed TextStim: autoDraw = True
+77.2867 	EXP 	unnamed TextStim: text = 'SELF'
+77.2867 	EXP 	unnamed TextStim: height = 0.7
+77.2867 	EXP 	unnamed TextStim: height = 0.7
+77.2867 	EXP 	unnamed TextStim: height = 0.7
+77.2867 	EXP 	unnamed TextStim: text = 'unsporting'
+77.2867 	EXP 	unnamed TextStim: autoDraw = True
+78.4045 	DATA 	Keypress: j
+78.4110 	EXP 	unnamed TextStim: autoDraw = True
+79.5785 	EXP 	unnamed TextStim: height = 0.7
+79.5785 	EXP 	unnamed TextStim: height = 0.7
+79.5785 	EXP 	unnamed TextStim: height = 0.7
+79.5785 	EXP 	unnamed TextStim: text = 'OBAMA'
+79.5785 	EXP 	unnamed TextStim: height = 0.7
+79.5785 	EXP 	unnamed TextStim: height = 0.7
+79.5785 	EXP 	unnamed TextStim: height = 0.7
+79.5785 	EXP 	unnamed TextStim: text = 'resigned'
+79.5785 	EXP 	unnamed TextStim: autoDraw = True
+80.4478 	DATA 	Keypress: k
+80.4503 	EXP 	unnamed TextStim: autoDraw = True
+84.3827 	EXP 	unnamed TextStim: height = 0.7
+84.3827 	EXP 	unnamed TextStim: height = 0.7
+84.3827 	EXP 	unnamed TextStim: height = 0.7
+84.3827 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+84.3827 	EXP 	unnamed TextStim: height = 0.7
+84.3827 	EXP 	unnamed TextStim: height = 0.7
+84.3827 	EXP 	unnamed TextStim: height = 0.7
+84.3827 	EXP 	unnamed TextStim: text = 'prudent'
+84.3827 	EXP 	unnamed TextStim: autoDraw = True
+85.5198 	DATA 	Keypress: k
+85.5249 	EXP 	unnamed TextStim: autoDraw = True
+87.8799 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+87.8799 	EXP 	unnamed TextStim: height = 0.7
+87.8799 	EXP 	unnamed TextStim: height = 0.7
+87.8799 	EXP 	unnamed TextStim: height = 0.7
+87.8799 	EXP 	unnamed TextStim: text = 'congenial'
+87.8799 	EXP 	unnamed TextStim: autoDraw = True
+88.8942 	DATA 	Keypress: k
+88.8966 	EXP 	unnamed TextStim: autoDraw = True
+94.4827 	EXP 	unnamed TextStim: height = 0.7
+94.4827 	EXP 	unnamed TextStim: height = 0.7
+94.4827 	EXP 	unnamed TextStim: height = 0.7
+94.4827 	EXP 	unnamed TextStim: text = 'SELF'
+94.4827 	EXP 	unnamed TextStim: height = 0.7
+94.4827 	EXP 	unnamed TextStim: height = 0.7
+94.4827 	EXP 	unnamed TextStim: height = 0.7
+94.4827 	EXP 	unnamed TextStim: text = 'insolent'
+94.4827 	EXP 	unnamed TextStim: autoDraw = True
+95.2578 	DATA 	Keypress: k
+95.2604 	EXP 	unnamed TextStim: autoDraw = True
+96.8810 	EXP 	unnamed TextStim: height = 0.7
+96.8810 	EXP 	unnamed TextStim: height = 0.7
+96.8810 	EXP 	unnamed TextStim: height = 0.7
+96.8810 	EXP 	unnamed TextStim: text = 'OBAMA'
+96.8810 	EXP 	unnamed TextStim: height = 0.7
+96.8810 	EXP 	unnamed TextStim: height = 0.7
+96.8810 	EXP 	unnamed TextStim: height = 0.7
+96.8810 	EXP 	unnamed TextStim: text = 'unindustrious'
+96.8810 	EXP 	unnamed TextStim: autoDraw = True
+97.7689 	DATA 	Keypress: k
+97.7716 	EXP 	unnamed TextStim: autoDraw = True
+99.5818 	EXP 	unnamed TextStim: height = 0.7
+99.5818 	EXP 	unnamed TextStim: height = 0.7
+99.5818 	EXP 	unnamed TextStim: height = 0.7
+99.5818 	EXP 	unnamed TextStim: text = 'SELF'
+99.5818 	EXP 	unnamed TextStim: height = 0.7
+99.5818 	EXP 	unnamed TextStim: height = 0.7
+99.5818 	EXP 	unnamed TextStim: height = 0.7
+99.5818 	EXP 	unnamed TextStim: text = 'unobliging'
+99.5818 	EXP 	unnamed TextStim: autoDraw = True
+100.6687 	DATA 	Keypress: j
+100.6810 	EXP 	unnamed TextStim: autoDraw = True
+103.0790 	EXP 	unnamed TextStim: height = 0.7
+103.0790 	EXP 	unnamed TextStim: height = 0.7
+103.0790 	EXP 	unnamed TextStim: height = 0.7
+103.0790 	EXP 	unnamed TextStim: text = 'OBAMA'
+103.0790 	EXP 	unnamed TextStim: height = 0.7
+103.0790 	EXP 	unnamed TextStim: height = 0.7
+103.0790 	EXP 	unnamed TextStim: height = 0.7
+103.0790 	EXP 	unnamed TextStim: text = 'irreligious'
+103.0790 	EXP 	unnamed TextStim: autoDraw = True
+103.6635 	DATA 	Keypress: k
+103.6665 	EXP 	unnamed TextStim: autoDraw = True
+106.2811 	EXP 	unnamed TextStim: text = 'OBAMA'
+106.2811 	EXP 	unnamed TextStim: height = 0.7
+106.2811 	EXP 	unnamed TextStim: height = 0.7
+106.2811 	EXP 	unnamed TextStim: height = 0.7
+106.2811 	EXP 	unnamed TextStim: text = 'bashful'
+106.2811 	EXP 	unnamed TextStim: autoDraw = True
+106.9050 	DATA 	Keypress: j
+106.9075 	EXP 	unnamed TextStim: autoDraw = True
+109.6806 	EXP 	unnamed TextStim: text = 'OBAMA'
+109.6806 	EXP 	unnamed TextStim: height = 0.7
+109.6806 	EXP 	unnamed TextStim: height = 0.7
+109.6806 	EXP 	unnamed TextStim: height = 0.7
+109.6806 	EXP 	unnamed TextStim: text = 'pompous'
+109.6806 	EXP 	unnamed TextStim: autoDraw = True
+110.3172 	DATA 	Keypress: k
+110.3194 	EXP 	unnamed TextStim: autoDraw = True
+115.8835 	EXP 	unnamed TextStim: height = 0.7
+115.8835 	EXP 	unnamed TextStim: height = 0.7
+115.8835 	EXP 	unnamed TextStim: height = 0.7
+115.8835 	EXP 	unnamed TextStim: text = 'SELF'
+115.8835 	EXP 	unnamed TextStim: height = 0.7
+115.8835 	EXP 	unnamed TextStim: height = 0.7
+115.8835 	EXP 	unnamed TextStim: height = 0.7
+115.8835 	EXP 	unnamed TextStim: text = 'unruly'
+115.8835 	EXP 	unnamed TextStim: autoDraw = True
+116.5203 	DATA 	Keypress: k
+116.5230 	EXP 	unnamed TextStim: autoDraw = True
+120.2847 	EXP 	unnamed TextStim: height = 0.7
+120.2847 	EXP 	unnamed TextStim: height = 0.7
+120.2847 	EXP 	unnamed TextStim: height = 0.7
+120.2847 	EXP 	unnamed TextStim: text = 'OBAMA'
+120.2847 	EXP 	unnamed TextStim: height = 0.7
+120.2847 	EXP 	unnamed TextStim: height = 0.7
+120.2847 	EXP 	unnamed TextStim: height = 0.7
+120.2847 	EXP 	unnamed TextStim: text = 'unenterprising'
+120.2847 	EXP 	unnamed TextStim: autoDraw = True
+120.9767 	DATA 	Keypress: k
+120.9792 	EXP 	unnamed TextStim: autoDraw = True
+126.0866 	EXP 	unnamed TextStim: height = 0.7
+126.0866 	EXP 	unnamed TextStim: height = 0.7
+126.0866 	EXP 	unnamed TextStim: height = 0.7
+126.0866 	EXP 	unnamed TextStim: text = 'SELF'
+126.0866 	EXP 	unnamed TextStim: height = 0.7
+126.0866 	EXP 	unnamed TextStim: height = 0.7
+126.0866 	EXP 	unnamed TextStim: height = 0.7
+126.0866 	EXP 	unnamed TextStim: text = 'underhanded'
+126.0866 	EXP 	unnamed TextStim: autoDraw = True
+126.6419 	DATA 	Keypress: k
+126.6448 	EXP 	unnamed TextStim: autoDraw = True
+129.0874 	EXP 	unnamed TextStim: height = 0.7
+129.0874 	EXP 	unnamed TextStim: height = 0.7
+129.0874 	EXP 	unnamed TextStim: height = 0.7
+129.0874 	EXP 	unnamed TextStim: text = 'OBAMA'
+129.0874 	EXP 	unnamed TextStim: height = 0.7
+129.0874 	EXP 	unnamed TextStim: height = 0.7
+129.0874 	EXP 	unnamed TextStim: height = 0.7
+129.0874 	EXP 	unnamed TextStim: text = 'obstinate'
+129.0874 	EXP 	unnamed TextStim: autoDraw = True
+129.6419 	DATA 	Keypress: j
+129.6453 	EXP 	unnamed TextStim: autoDraw = True
+129.6470 	EXP 	unnamed TextStim: autoDraw = False
+133.4930 	EXP 	window1: mouseVisible = True
+133.4932 	WARNING 	Monitor specification not found. Creating a temporary one...
+134.6559 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+134.6561 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d880>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d820>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d610>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fa250011790>, multiSample=False, name='window1', numSamples=2, pos=(526, 331), screen=0, size=array([1840, 1280]), stencilBits=0, stereo=False, title='PsychoPy', units='pix', useFBO=False, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+134.6562 	EXP 	window1: backgroundImage = None
+134.6562 	EXP 	window1: backgroundFit = 'cover'
+134.6563 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d9a0>
+134.6575 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-0.5, -0.5, -0.5]), fillColorSpace='rgb', fillRGB=array([-0.5, -0.5, -0.5]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='unnamed Rect', opacity=0.45, ori=0.0, pos=array([0., 0.]), size=array([880., 520.]), units='pix', vertices=ndarray(...), win=Window(...))
+134.7108 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fa2d064d9a0>
+134.7258 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=28.0, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=820)
+134.7278 	WARNING 	t of last frame was 71.90ms (=1/13)
+179.9605 	DATA 	Keypress: space
+179.9671 	EXP 	window1: mouseVisible = True

@@ -24,6 +24,8 @@ def run_run(setting, df_trial, max_duration,
     # --- Counters for UPPERCASE accuracy over the run ---
     uppercase_total = 0
     uppercase_correct = 0
+    total_trials = len(df_trial)
+    missing_responses = 0
 
     trialClock.reset()
     for index, row in df_trial.iterrows():
@@ -74,6 +76,7 @@ def run_run(setting, df_trial, max_duration,
             response = None
             reaction_time = None
             rt = None
+            missing_responses += 1
 
         # ---- Early quit ----
         if response in QUIT_KEYS:
@@ -127,6 +130,8 @@ def run_run(setting, df_trial, max_duration,
     # Store run-level stats for post-run feedback
     thisExp.extraInfo['uppercase_total'] = uppercase_total
     thisExp.extraInfo['uppercase_correct'] = uppercase_correct
+    thisExp.extraInfo['total_trials'] = total_trials
+    thisExp.extraInfo['missing_responses'] = missing_responses
 
 
 # %%
@@ -167,12 +172,16 @@ def run_goodbye(win, fix, thisExp, feedback_duration_sec=0.0):
     # ---- Build feedback from stored stats ----
     uppercase_total = thisExp.extraInfo.get('uppercase_total', 0)
     uppercase_correct = thisExp.extraInfo.get('uppercase_correct', 0)
+    t_trials = thisExp.extraInfo.get('total_trials', 0)
+    m_responses = thisExp.extraInfo.get('missing_responses', 0)
+    m_rate = (m_responses / t_trials * 100) if t_trials > 0 else 0
 
     if uppercase_total > 0:
         acc_pct = 100.0 * uppercase_correct / float(uppercase_total)
         feedback_lines = [
             'Question: "Is the word in UPPERCASE?"',
-            f'UPPERCASE accuracy: {acc_pct:.1f}%  ({uppercase_correct}/{uppercase_total})'
+            f'UPPERCASE accuracy: {acc_pct:.1f}%  ({uppercase_correct}/{uppercase_total})',
+            f"Missing Rate: {m_rate:.1f}% ({m_responses}/{t_trials} trials)"
         ]
     else:
         feedback_lines = [
@@ -203,11 +212,15 @@ def show_postrun_feedback(thisExp, wait_for_key=True, duration_sec=5.0):
     # Build feedback text from saved stats
     uppercase_total = thisExp.extraInfo.get('uppercase_total', 0)
     uppercase_correct = thisExp.extraInfo.get('uppercase_correct', 0)
+    t_trials = thisExp.extraInfo.get('total_trials', 0)
+    m_responses = thisExp.extraInfo.get('missing_responses', 0)
+    m_rate = (m_responses / t_trials * 100) if t_trials > 0 else 0
 
     if uppercase_total > 0:
         acc_pct = 100.0 * uppercase_correct / float(uppercase_total)
         feedback_text = (
             f'UPPERCASE accuracy: {acc_pct:.1f}%  ({uppercase_correct}/{uppercase_total})\n\n'
+            f"Missing Rate: {m_rate:.1f}% ({m_responses}/{t_trials})\n\n"
             + ('Press any key to exit.' if wait_for_key else f'Holding for {duration_sec:.0f}s...')
         )
     else:

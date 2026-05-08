@@ -1,0 +1,7 @@
+﻿thisRow.t	notes	trial_no	onset_time	words	condition_name	valence	judgement	accurate_onsetTime	reaction_time	rt	responses	answer	expected_answer	is_correct	setting	words_file	subID	sessionID	runID	
+		1	0.0	unsporting	SELF	2	SELF	0.057773416046984494	None	None	None	None	None	None	SCANNER	wordlist_runprac.csv	0	Baseline	prac	
+		2	2.8	soft-hearted	UPPERCASE	2	UPPER	2.804304499994032	None	None	None	None	yes	0	SCANNER	wordlist_runprac.csv	0	Baseline	prac	
+		3	6.5	inoffensive	UPPERCASE	3	LOWER	6.511859250022098	None	None	None	None	no	0	SCANNER	wordlist_runprac.csv	0	Baseline	prac	
+		4	10.2	irreligious	OBAMA	1	OBAMA	10.215951541089453	None	None	None	None	None	None	SCANNER	wordlist_runprac.csv	0	Baseline	prac	
+		5	15.5	maladjusted	SELF	3	SELF	15.518015415989794	None	None	None	None	None	None	SCANNER	wordlist_runprac.csv	0	Baseline	prac	
+		6	17.9	prudent	UPPERCASE	1	LOWER	17.913996583083645												

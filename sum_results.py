@@ -84,10 +84,12 @@ from collections import defaultdict, deque
 
 # ================= USER SETTINGS =================
 # Input: Where your current .log and .csv files are located
-INPUT_DIR = os.path.join(os.getcwd(), 'results')
+#INPUT_DIR = os.path.join(os.getcwd(), 'results')
+INPUT_DIR = '/Users/xiaoqianxiao/projects/IFOCUS/DATA/sourcedata/behavioral/self_others'
 
 # Output: Where the summary files will be saved
-RESULTS_DIR = os.path.join(os.getcwd(), 'results', 'summary')
+#RESULTS_DIR = os.path.join(os.getcwd(), 'results', 'summary')
+RESULTS_DIR = '/Users/xiaoqianxiao/projects/IFOCUS/DATA/rawdata/behavioral/self_others'
 
 # The exact columns to keep in the final output
 FINAL_COLUMNS = [
@@ -256,7 +258,8 @@ def get_single_log(log_filename, input_dir, output_dir):
         existing_cols = [c for c in FINAL_COLUMNS if c in df.columns]
         df_final = df[existing_cols]
 
-    output_filename = os.path.splitext(log_filename)[0] + '_summary.csv'
+    #output_filename = os.path.splitext(log_filename)[0] + '_summary.csv'
+    output_filename = log_filename.split("_time")[0] + '.csv'
     output_path = os.path.join(output_dir, output_filename)
     
     df_final.to_csv(output_path, index=False)

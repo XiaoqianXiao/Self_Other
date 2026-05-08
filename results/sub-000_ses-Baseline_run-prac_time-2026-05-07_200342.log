@@ -1,0 +1,103 @@
+18.1369 	WARNING 	ExperimentHandler created with no dataFileName parameter. No data will be saved in the event of a crash
+18.1497 	WARNING 	Requested an unavailable screen number - using first available.
+18.1509 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1512, 982]. Using actual size
+19.3771 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+19.3775 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fd188a74a60>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fd188a74a00>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fd188a747f0>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fd11182d370>, multiSample=False, name='window1', numSamples=2, pos=[378.0, 245.5], screen=1, size=array([3024, 1964]), stencilBits=0, stereo=False, title='PsychoPy', units='deg', useFBO=False, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+19.3775 	EXP 	window1: backgroundImage = None
+19.3775 	EXP 	window1: backgroundFit = 'cover'
+19.3779 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fd188a74b80>
+19.4061 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='Geneva', fontFiles=[], height=0.5, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='deg', win=Window(...), wrapWidth=15.0)
+19.4063 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fd188a74b80>
+19.4127 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='Geneva', fontFiles=[], height=0.4, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0. , 0.7]), rgb=UNKNOWN, text='Hello World', units='deg', win=Window(...), wrapWidth=15.0)
+19.4128 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fd188a74b80>
+19.4180 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='Geneva', fontFiles=[], height=0.7, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0. , 0.7]), rgb=UNKNOWN, text='Hello World', units='deg', win=Window(...), wrapWidth=15.0)
+19.4180 	EXP 	window1: mouseVisible = <method-wrapper '__getattribute__' of attributeSetter object at 0x7fd188a74b80>
+19.4199 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='Geneva', fontFiles=[], height=0.7, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0. , -0.7]), rgb=UNKNOWN, text='Hello World', units='deg', win=Window(...), wrapWidth=15.0)
+19.4218 	EXP 	window1: mouseVisible = False
+19.4434 	WARNING 	t of last frame was 66.31ms (=1/15)
+19.4434 	EXP 	unnamed TextStim: height = 0.4
+19.4434 	EXP 	unnamed TextStim: height = 0.4
+19.4434 	EXP 	unnamed TextStim: height = 0.4
+19.4434 	EXP 	unnamed TextStim: text = 'Please press right index finger yes \n \nand press right middle finger for no'
+21.4446 	DATA 	Keypress: t
+22.0028 	WARNING 	t of last frame was 2559.40ms (=1/0)
+22.0028 	EXP 	unnamed TextStim: height = 0.7
+22.0028 	EXP 	unnamed TextStim: height = 0.7
+22.0028 	EXP 	unnamed TextStim: height = 0.7
+22.0028 	EXP 	unnamed TextStim: text = 'SELF'
+22.0028 	EXP 	unnamed TextStim: height = 0.7
+22.0028 	EXP 	unnamed TextStim: height = 0.7
+22.0028 	EXP 	unnamed TextStim: height = 0.7
+22.0028 	EXP 	unnamed TextStim: text = 'unsporting'
+22.0028 	EXP 	unnamed TextStim: autoDraw = True
+23.3106 	DATA 	Keypress: j
+24.0032 	DATA 	No keypress (maxWait exceeded)
+24.0157 	WARNING 	t of last frame was 2012.94ms (=1/0)
+24.0157 	EXP 	unnamed TextStim: autoDraw = True
+24.7494 	WARNING 	t of last frame was 733.66ms (=1/1)
+24.7494 	EXP 	unnamed TextStim: height = 0.7
+24.7494 	EXP 	unnamed TextStim: height = 0.7
+24.7494 	EXP 	unnamed TextStim: height = 0.7
+24.7494 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+24.7494 	EXP 	unnamed TextStim: height = 0.7
+24.7494 	EXP 	unnamed TextStim: height = 0.7
+24.7494 	EXP 	unnamed TextStim: height = 0.7
+24.7494 	EXP 	unnamed TextStim: text = 'SOFT-HEARTED'
+24.7494 	EXP 	unnamed TextStim: autoDraw = True
+26.1642 	DATA 	Keypress: j
+26.7497 	DATA 	No keypress (maxWait exceeded)
+26.7614 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+26.7614 	EXP 	unnamed TextStim: autoDraw = True
+28.4567 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+28.4567 	EXP 	unnamed TextStim: height = 0.7
+28.4567 	EXP 	unnamed TextStim: height = 0.7
+28.4567 	EXP 	unnamed TextStim: height = 0.7
+28.4567 	EXP 	unnamed TextStim: text = 'inoffensive'
+28.4567 	EXP 	unnamed TextStim: autoDraw = True
+29.5190 	DATA 	Keypress: k
+30.4572 	DATA 	No keypress (maxWait exceeded)
+30.4692 	EXP 	unnamed TextStim: autoDraw = True
+32.1610 	EXP 	unnamed TextStim: height = 0.7
+32.1610 	EXP 	unnamed TextStim: height = 0.7
+32.1610 	EXP 	unnamed TextStim: height = 0.7
+32.1610 	EXP 	unnamed TextStim: text = 'OBAMA'
+32.1610 	EXP 	unnamed TextStim: height = 0.7
+32.1610 	EXP 	unnamed TextStim: height = 0.7
+32.1610 	EXP 	unnamed TextStim: height = 0.7
+32.1610 	EXP 	unnamed TextStim: text = 'irreligious'
+32.1610 	EXP 	unnamed TextStim: autoDraw = True
+33.2354 	DATA 	Keypress: k
+34.1615 	DATA 	No keypress (maxWait exceeded)
+34.1758 	EXP 	unnamed TextStim: autoDraw = True
+37.4631 	EXP 	unnamed TextStim: height = 0.7
+37.4631 	EXP 	unnamed TextStim: height = 0.7
+37.4631 	EXP 	unnamed TextStim: height = 0.7
+37.4631 	EXP 	unnamed TextStim: text = 'SELF'
+37.4631 	EXP 	unnamed TextStim: height = 0.7
+37.4631 	EXP 	unnamed TextStim: height = 0.7
+37.4631 	EXP 	unnamed TextStim: height = 0.7
+37.4631 	EXP 	unnamed TextStim: text = 'maladjusted'
+37.4631 	EXP 	unnamed TextStim: autoDraw = True
+37.7081 	DATA 	Keypress: j
+38.3160 	DATA 	Keypress: j
+38.4757 	DATA 	Keypress: k
+38.6504 	DATA 	Keypress: j
+38.7116 	DATA 	Keypress: k
+38.8575 	DATA 	Keypress: j
+39.4634 	DATA 	No keypress (maxWait exceeded)
+39.4752 	EXP 	unnamed TextStim: autoDraw = True
+39.8571 	DATA 	Keypress: escape
+39.8591 	EXP 	unnamed TextStim: height = 0.7
+39.8591 	EXP 	unnamed TextStim: height = 0.7
+39.8591 	EXP 	unnamed TextStim: height = 0.7
+39.8591 	EXP 	unnamed TextStim: text = 'UPPERCASE'
+39.8591 	EXP 	unnamed TextStim: height = 0.7
+39.8591 	EXP 	unnamed TextStim: height = 0.7
+39.8591 	EXP 	unnamed TextStim: height = 0.7
+39.8591 	EXP 	unnamed TextStim: text = 'prudent'
+39.8591 	EXP 	unnamed TextStim: autoDraw = True
+39.9642 	DATA 	Keypress: escape
+40.0798 	EXP 	window1: mouseVisible = True
